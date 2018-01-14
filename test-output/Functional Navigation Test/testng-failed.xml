@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Functional Navigation Test]">
+  <test name="WebDriverSignInFucntion(failed)">
+    <groups>
+      <run>
+        <include name="FunctionTests"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="xboxLiveTestFramework.SignInProfileTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="signOutAccount"/>
+          <include name="setUp"/>
+          <include name="signUpMainToXboxFriends"/>
+          <include name="tearDown"/>
+          <include name="signUpMainToXboxTrendOnLive"/>
+        </methods>
+      </class> <!-- xboxLiveTestFramework.SignInProfileTest -->
+    </classes>
+  </test> <!-- WebDriverSignInFucntion(failed) -->
+</suite> <!-- Failed suite [Functional Navigation Test] -->

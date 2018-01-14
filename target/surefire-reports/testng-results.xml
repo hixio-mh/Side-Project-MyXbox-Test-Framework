@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="2" failed="0" ignored="4" total="23" passed="17">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All-Tests" duration-ms="403235" started-at="2018-01-14T20:55:18Z" finished-at="2018-01-14T21:02:01Z">
+    <groups>
+      <group name="SignInAccount">
+        <method signature="SignInProfileTest.signUpFromMainToProfile()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpFromMainToProfile" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+      </group> <!-- SignInAccount -->
+      <group name="mainpage">
+        <method signature="UnitContentTest.checkMainAchievements()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainAchievements" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainClubs()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainClubs" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainFriends()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainFriends" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainHome()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainHome" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainMessages()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMessages" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainMyGame()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMyGame" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainProfile()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainProfile" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainTrending()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainTrending" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkSignInComponent()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkSignInComponent" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+      </group> <!-- mainpage -->
+      <group name="regression">
+        <method signature="RegressionTest.regression()[pri:0, instance:xboxLiveTestFramework_Tests.RegressionTest@2c6a3f77]" name="regression" class="xboxLiveTestFramework_Tests.RegressionTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="RegressionTest.regression()[pri:0, instance:xboxLiveTestFramework_Tests.RegressionTest@2c6a3f77]" name="regression" class="xboxLiveTestFramework_Tests.RegressionTest"/>
+      </group> <!-- smoke -->
+      <group name="contentcheck">
+        <method signature="UnitContentTest.checkMainAchievements()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainAchievements" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainClubs()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainClubs" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainFriends()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainFriends" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainHome()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainHome" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainMessages()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMessages" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainMyGame()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMyGame" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainProfile()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainProfile" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainTrending()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainTrending" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkSignInComponent()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkSignInComponent" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+      </group> <!-- contentcheck -->
+      <group name="friendsandclubs">
+        <method signature="FriendsAndClubsSideBarTest.findByText()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="findByText" class="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest"/>
+        <method signature="FriendsAndClubsSideBarTest.removeSuggestions()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="removeSuggestions" class="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest"/>
+      </group> <!-- friendsandclubs -->
+      <group name="FunctionTests">
+        <method signature="SignInProfileTest.signUpFromMainToProfile()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpFromMainToProfile" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+        <method signature="SignInProfileTest.signUpMainToXboxAchievements()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxAchievements" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+        <method signature="SignInProfileTest.signUpMainToXboxFriends()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxFriends" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+        <method signature="SignInProfileTest.signUpMainToXboxHome()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxHome" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+        <method signature="SignInProfileTest.signUpMainToXboxMessages()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxMessages" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+        <method signature="SignInProfileTest.signUpMainToXboxMyGames()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxMyGames" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+        <method signature="SignInProfileTest.signUpMainToXboxTrendOnLive()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxTrendOnLive" class="xboxLiveTestFramework_Tests.SignInProfileTest"/>
+      </group> <!-- FunctionTests -->
+      <group name="signedout">
+        <method signature="UnitContentTest.checkMainAchievements()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainAchievements" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainClubs()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainClubs" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainFriends()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainFriends" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainHome()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainHome" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainMessages()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMessages" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainMyGame()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMyGame" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainProfile()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainProfile" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkMainTrending()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainTrending" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+        <method signature="UnitContentTest.checkSignInComponent()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkSignInComponent" class="xboxLiveTestFramework_Tests.UnitContentTest"/>
+      </group> <!-- signedout -->
+    </groups>
+    <test name="Tests" duration-ms="403235" started-at="2018-01-14T20:55:18Z" finished-at="2018-01-14T21:02:01Z">
+      <class name="xboxLiveTestFramework_Tests.UnitContentTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="setUp" is-config="true" duration-ms="3514" started-at="2018-01-14T13:01:48Z" finished-at="2018-01-14T13:01:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setupMainWebPage()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="setupMainWebPage" is-config="true" duration-ms="7957" started-at="2018-01-14T13:01:51Z" finished-at="2018-01-14T13:01:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMainWebPage -->
+        <test-method status="PASS" signature="checkMainAchievements()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainAchievements" duration-ms="84" started-at="2018-01-14T13:01:59Z" finished-at="2018-01-14T13:01:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainAchievements -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="387" started-at="2018-01-14T13:01:59Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainClubs()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainClubs" duration-ms="61" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainClubs -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="12" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainFriends()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainFriends" duration-ms="67" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainFriends -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="8" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainHome()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainHome" duration-ms="38" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainHome -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="8" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainMessages()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMessages" duration-ms="81" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainMessages -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="13" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainMyGame()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainMyGame" duration-ms="85" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainMyGame -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="14" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainProfile()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainProfile" duration-ms="83" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainProfile -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="8" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkMainTrending()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkMainTrending" duration-ms="73" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMainTrending -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="13" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkSignInComponent()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="checkSignInComponent" duration-ms="134" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSignInComponent -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="cleanUp" is-config="true" duration-ms="16" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:xboxLiveTestFramework_Tests.UnitContentTest@62043840]" name="tearDown" is-config="true" duration-ms="432" started-at="2018-01-14T13:02:00Z" finished-at="2018-01-14T13:02:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- xboxLiveTestFramework_Tests.UnitContentTest -->
+      <class name="xboxLiveTestFramework_Tests.RegressionTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:xboxLiveTestFramework_Tests.RegressionTest@2c6a3f77]" name="setUp" is-config="true" duration-ms="3461" started-at="2018-01-14T12:55:54Z" finished-at="2018-01-14T12:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="regression()[pri:0, instance:xboxLiveTestFramework_Tests.RegressionTest@2c6a3f77]" name="regression" duration-ms="12177" started-at="2018-01-14T12:55:57Z" finished-at="2018-01-14T12:56:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regression -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.RegressionTest@2c6a3f77]" name="cleanUp" is-config="true" duration-ms="366" started-at="2018-01-14T12:56:10Z" finished-at="2018-01-14T12:56:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:xboxLiveTestFramework_Tests.RegressionTest@2c6a3f77]" name="tearDown" is-config="true" duration-ms="457" started-at="2018-01-14T12:56:10Z" finished-at="2018-01-14T12:56:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- xboxLiveTestFramework_Tests.RegressionTest -->
+      <class name="xboxLiveTestFramework_Tests.BaseTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:xboxLiveTestFramework_Tests.BaseTest@180bc464]" name="beforeTest" is-config="true" duration-ms="11" started-at="2018-01-14T12:55:18Z" finished-at="2018-01-14T12:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+      </class> <!-- xboxLiveTestFramework_Tests.BaseTest -->
+      <class name="xboxLiveTestFramework_Tests.SignInProfileTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="setUp" is-config="true" duration-ms="3360" started-at="2018-01-14T12:56:11Z" finished-at="2018-01-14T12:56:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signUpFromMainToProfile()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpFromMainToProfile" duration-ms="33241" started-at="2018-01-14T12:56:14Z" finished-at="2018-01-14T12:56:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpFromMainToProfile -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="4367" started-at="2018-01-14T12:56:47Z" finished-at="2018-01-14T12:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="4162" started-at="2018-01-14T12:56:51Z" finished-at="2018-01-14T12:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="signUpMainToXboxAchievements()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxAchievements" duration-ms="26964" started-at="2018-01-14T12:56:56Z" finished-at="2018-01-14T12:57:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpMainToXboxAchievements -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="4814" started-at="2018-01-14T12:57:23Z" finished-at="2018-01-14T12:57:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="2540" started-at="2018-01-14T12:57:27Z" finished-at="2018-01-14T12:57:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="signUpMainToXboxFriends()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxFriends" duration-ms="28699" started-at="2018-01-14T12:57:30Z" finished-at="2018-01-14T12:57:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpMainToXboxFriends -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="5373" started-at="2018-01-14T12:57:59Z" finished-at="2018-01-14T12:58:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="2586" started-at="2018-01-14T12:58:04Z" finished-at="2018-01-14T12:58:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="signUpMainToXboxHome()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxHome" duration-ms="27032" started-at="2018-01-14T12:58:07Z" finished-at="2018-01-14T12:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpMainToXboxHome -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="4342" started-at="2018-01-14T12:58:34Z" finished-at="2018-01-14T12:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="2674" started-at="2018-01-14T12:58:38Z" finished-at="2018-01-14T12:58:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="signUpMainToXboxMessages()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxMessages" duration-ms="22346" started-at="2018-01-14T12:58:41Z" finished-at="2018-01-14T12:59:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpMainToXboxMessages -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="4332" started-at="2018-01-14T12:59:03Z" finished-at="2018-01-14T12:59:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="2769" started-at="2018-01-14T12:59:07Z" finished-at="2018-01-14T12:59:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="signUpMainToXboxMyGames()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxMyGames" duration-ms="24206" started-at="2018-01-14T12:59:10Z" finished-at="2018-01-14T12:59:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpMainToXboxMyGames -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="4652" started-at="2018-01-14T12:59:34Z" finished-at="2018-01-14T12:59:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="2777" started-at="2018-01-14T12:59:39Z" finished-at="2018-01-14T12:59:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="signUpMainToXboxTrendOnLive()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signUpMainToXboxTrendOnLive" duration-ms="117358" started-at="2018-01-14T12:59:42Z" finished-at="2018-01-14T13:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpMainToXboxTrendOnLive -->
+        <test-method status="PASS" signature="signOutAccount()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="signOutAccount" is-config="true" duration-ms="4632" started-at="2018-01-14T13:01:39Z" finished-at="2018-01-14T13:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutAccount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="cleanUp" is-config="true" duration-ms="3386" started-at="2018-01-14T13:01:44Z" finished-at="2018-01-14T13:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:xboxLiveTestFramework_Tests.SignInProfileTest@246ae04d]" name="tearDown" is-config="true" duration-ms="646" started-at="2018-01-14T13:01:47Z" finished-at="2018-01-14T13:01:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- xboxLiveTestFramework_Tests.SignInProfileTest -->
+      <class name="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="setUp" is-config="true" duration-ms="4209" started-at="2018-01-14T12:55:18Z" finished-at="2018-01-14T12:55:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="signInToSetUp()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="signInToSetUp" is-config="true" duration-ms="27893" started-at="2018-01-14T12:55:22Z" finished-at="2018-01-14T12:55:50Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"meControl"}  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: 77d77827df818972d70fa8c4825527b4*** Element info: {Using=id, value=meControl}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"meControl"}  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: 77d77827df818972d70fa8c4825527b4*** Element info: {Using=id, value=meControl}at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.lang.reflect.Constructor.newInstance(Constructor.java:423)at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)at org.openqa.selenium.By$ById.findElement(By.java:218)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)at xboxLivePageObjects_Lib.Driver.findElement(Driver.java:33)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at com.sun.proxy.$Proxy10.findElement(Unknown Source)at xboxLivePageObjects_Lib.SignInConfirmationComponent.confirmationSignIn(SignInConfirmationComponent.java:29)at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.signInToSetUp(FriendsAndClubsSideBarTest.java:25)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInToSetUp -->
+        <test-method status="SKIP" signature="findByText()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="findByText" duration-ms="0" started-at="2018-01-14T12:55:50Z" finished-at="2018-01-14T12:55:50Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"meControl"}  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: 77d77827df818972d70fa8c4825527b4*** Element info: {Using=id, value=meControl}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"meControl"}  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: 77d77827df818972d70fa8c4825527b4*** Element info: {Using=id, value=meControl}at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.lang.reflect.Constructor.newInstance(Constructor.java:423)at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)at org.openqa.selenium.By$ById.findElement(By.java:218)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)at xboxLivePageObjects_Lib.Driver.findElement(Driver.java:33)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at com.sun.proxy.$Proxy10.findElement(Unknown Source)at xboxLivePageObjects_Lib.SignInConfirmationComponent.confirmationSignIn(SignInConfirmationComponent.java:29)at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.signInToSetUp(FriendsAndClubsSideBarTest.java:25)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findByText -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="cleanUp" is-config="true" duration-ms="1941" started-at="2018-01-14T12:55:50Z" finished-at="2018-01-14T12:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="SKIP" signature="removeSuggestions()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="removeSuggestions" duration-ms="0" started-at="2018-01-14T12:55:52Z" finished-at="2018-01-14T12:55:52Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"meControl"}  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: 77d77827df818972d70fa8c4825527b4*** Element info: {Using=id, value=meControl}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"meControl"}  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: 77d77827df818972d70fa8c4825527b4*** Element info: {Using=id, value=meControl}at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.lang.reflect.Constructor.newInstance(Constructor.java:423)at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)at org.openqa.selenium.By$ById.findElement(By.java:218)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)at xboxLivePageObjects_Lib.Driver.findElement(Driver.java:33)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at com.sun.proxy.$Proxy10.findElement(Unknown Source)at xboxLivePageObjects_Lib.SignInConfirmationComponent.confirmationSignIn(SignInConfirmationComponent.java:29)at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.signInToSetUp(FriendsAndClubsSideBarTest.java:25)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeSuggestions -->
+        <test-method status="SKIP" signature="signInToSetUp()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="signInToSetUp" is-config="true" duration-ms="0" started-at="2018-01-14T12:55:52Z" finished-at="2018-01-14T12:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInToSetUp -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="cleanUp" is-config="true" duration-ms="110" started-at="2018-01-14T12:55:52Z" finished-at="2018-01-14T12:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest@1324409e]" name="tearDown" is-config="true" duration-ms="2161" started-at="2018-01-14T12:55:52Z" finished-at="2018-01-14T12:55:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
+    </test> <!-- Tests -->
+  </suite> <!-- All-Tests -->
+</testng-results>

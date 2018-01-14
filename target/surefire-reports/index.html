@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-All-Tests">
+              <span class="suite-name border-skipped">All-Tests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-All-Tests">
+                    <span>C:\eclipse\workspace\XboxLiveTestFramework\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-All-Tests">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-All-Tests">
+                    <span>8 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-All-Tests">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-All-Tests">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-All-Tests">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-All-Tests">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">19 methods,  2 skipped,  17 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-All-Tests" class="hide-methods skipped suite-All-Tests"> (hide)</a> <!-- hide-methods skipped suite-All-Tests -->
+                      <a href="#" panel-name="suite-All-Tests" class="show-methods skipped suite-All-Tests"> (show)</a> <!-- show-methods skipped suite-All-Tests -->
+                    </span>
+                    <div class="method-list-content skipped suite-All-Tests">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" hash-for-method="findByText">findByText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" hash-for-method="removeSuggestions">removeSuggestions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-All-Tests -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-All-Tests" class="hide-methods passed suite-All-Tests"> (hide)</a> <!-- hide-methods passed suite-All-Tests -->
+                      <a href="#" panel-name="suite-All-Tests" class="show-methods passed suite-All-Tests"> (show)</a> <!-- show-methods passed suite-All-Tests -->
+                    </span>
+                    <div class="method-list-content passed suite-All-Tests">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainAchievements">checkMainAchievements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainClubs">checkMainClubs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainFriends">checkMainFriends</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainHome">checkMainHome</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainMessages">checkMainMessages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainMyGame">checkMainMyGame</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainProfile">checkMainProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkMainTrending">checkMainTrending</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.UnitContentTest" hash-for-method="checkSignInComponent">checkSignInComponent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.RegressionTest" hash-for-method="regression">regression</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpFromMainToProfile">signUpFromMainToProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpMainToXboxAchievements">signUpMainToXboxAchievements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpMainToXboxFriends">signUpMainToXboxFriends</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpMainToXboxHome">signUpMainToXboxHome</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpMainToXboxMessages">signUpMainToXboxMessages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpMainToXboxMyGames">signUpMainToXboxMyGames</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.SignInProfileTest" hash-for-method="signUpMainToXboxTrendOnLive">signUpMainToXboxTrendOnLive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-All-Tests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-All-Tests" class="panel All-Tests">
+          <div class="suite-All-Tests-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="findByText">
+                  </a> <!-- findByText -->
+                  <span class="method-name">findByText</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;meControl&quot;}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.29&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
+Session ID: 77d77827df818972d70fa8c4825527b4
+*** Element info: {Using=id, value=meControl}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at xboxLivePageObjects_Lib.Driver.findElement(Driver.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at xboxLivePageObjects_Lib.SignInConfirmationComponent.confirmationSignIn(SignInConfirmationComponent.java:29)
+	at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.signInToSetUp(FriendsAndClubsSideBarTest.java:25)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeSuggestions">
+                  </a> <!-- removeSuggestions -->
+                  <span class="method-name">removeSuggestions</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;meControl&quot;}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.29&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
+Session ID: 77d77827df818972d70fa8c4825527b4
+*** Element info: {Using=id, value=meControl}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at xboxLivePageObjects_Lib.Driver.findElement(Driver.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at xboxLivePageObjects_Lib.SignInConfirmationComponent.confirmationSignIn(SignInConfirmationComponent.java:29)
+	at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.signInToSetUp(FriendsAndClubsSideBarTest.java:25)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All-Tests-class-skipped -->
+          <div class="suite-All-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">xboxLiveTestFramework_Tests.RegressionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="regression">
+                  </a> <!-- regression -->
+                  <span class="method-name">regression</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All-Tests-class-passed -->
+          <div class="suite-All-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">xboxLiveTestFramework_Tests.UnitContentTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainAchievements">
+                  </a> <!-- checkMainAchievements -->
+                  <span class="method-name">checkMainAchievements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainClubs">
+                  </a> <!-- checkMainClubs -->
+                  <span class="method-name">checkMainClubs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainFriends">
+                  </a> <!-- checkMainFriends -->
+                  <span class="method-name">checkMainFriends</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainHome">
+                  </a> <!-- checkMainHome -->
+                  <span class="method-name">checkMainHome</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainMessages">
+                  </a> <!-- checkMainMessages -->
+                  <span class="method-name">checkMainMessages</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainMyGame">
+                  </a> <!-- checkMainMyGame -->
+                  <span class="method-name">checkMainMyGame</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainProfile">
+                  </a> <!-- checkMainProfile -->
+                  <span class="method-name">checkMainProfile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMainTrending">
+                  </a> <!-- checkMainTrending -->
+                  <span class="method-name">checkMainTrending</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkSignInComponent">
+                  </a> <!-- checkSignInComponent -->
+                  <span class="method-name">checkSignInComponent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All-Tests-class-passed -->
+          <div class="suite-All-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">xboxLiveTestFramework_Tests.SignInProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpFromMainToProfile">
+                  </a> <!-- signUpFromMainToProfile -->
+                  <span class="method-name">signUpFromMainToProfile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpMainToXboxAchievements">
+                  </a> <!-- signUpMainToXboxAchievements -->
+                  <span class="method-name">signUpMainToXboxAchievements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpMainToXboxFriends">
+                  </a> <!-- signUpMainToXboxFriends -->
+                  <span class="method-name">signUpMainToXboxFriends</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpMainToXboxHome">
+                  </a> <!-- signUpMainToXboxHome -->
+                  <span class="method-name">signUpMainToXboxHome</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpMainToXboxMessages">
+                  </a> <!-- signUpMainToXboxMessages -->
+                  <span class="method-name">signUpMainToXboxMessages</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpMainToXboxMyGames">
+                  </a> <!-- signUpMainToXboxMyGames -->
+                  <span class="method-name">signUpMainToXboxMyGames</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpMainToXboxTrendOnLive">
+                  </a> <!-- signUpMainToXboxTrendOnLive -->
+                  <span class="method-name">signUpMainToXboxTrendOnLive</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All-Tests-class-passed -->
+        </div> <!-- panel All-Tests -->
+        <div panel-name="test-xml-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\eclipse\workspace\XboxLiveTestFramework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;All-Tests&quot;&gt;
+  &lt;test verbose=&quot;0&quot; name=&quot;Tests&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;xboxLiveTestFramework_Tests&quot;/&gt;
+    &lt;/packages&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.BaseTest&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.RegressionTest&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.SignInProfileTest&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.UnitContentTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Tests --&gt;
+&lt;/suite&gt; &lt;!-- All-Tests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for All-Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Tests (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for All-Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">FunctionTests</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpFromMainToProfile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpMainToXboxAchievements</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpMainToXboxFriends</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpMainToXboxHome</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpMainToXboxMessages</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpMainToXboxMyGames</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpMainToXboxTrendOnLive</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">SignInAccount</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">signUpFromMainToProfile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">contentcheck</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainAchievements</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainClubs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainFriends</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainHome</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainMessages</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainMyGame</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainProfile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainTrending</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkSignInComponent</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">friendsandclubs</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">findByText</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">removeSuggestions</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">mainpage</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainAchievements</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainClubs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainFriends</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainHome</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainMessages</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainMyGame</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainProfile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainTrending</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkSignInComponent</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">regression</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">signedout</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainAchievements</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainClubs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainFriends</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainHome</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainMessages</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainMyGame</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainProfile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkMainTrending</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkSignInComponent</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">regression</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for All-Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_All-Tests');
+function tableData_All-Tests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(19);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'signUpMainToXboxTrendOnLive')
+data.setCell(0, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(0, 3, 117358);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'signUpFromMainToProfile')
+data.setCell(1, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(1, 3, 33241);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'signUpMainToXboxFriends')
+data.setCell(2, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(2, 3, 28699);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'signUpMainToXboxHome')
+data.setCell(3, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(3, 3, 27032);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'signUpMainToXboxAchievements')
+data.setCell(4, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(4, 3, 26964);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'signUpMainToXboxMyGames')
+data.setCell(5, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(5, 3, 24206);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'signUpMainToXboxMessages')
+data.setCell(6, 2, 'xboxLiveTestFramework_Tests.SignInProfileTest')
+data.setCell(6, 3, 22346);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'regression')
+data.setCell(7, 2, 'xboxLiveTestFramework_Tests.RegressionTest')
+data.setCell(7, 3, 12177);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'checkSignInComponent')
+data.setCell(8, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(8, 3, 134);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'checkMainMyGame')
+data.setCell(9, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(9, 3, 85);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'checkMainAchievements')
+data.setCell(10, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(10, 3, 84);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'checkMainProfile')
+data.setCell(11, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(11, 3, 83);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'checkMainMessages')
+data.setCell(12, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(12, 3, 81);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'checkMainTrending')
+data.setCell(13, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(13, 3, 73);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'checkMainFriends')
+data.setCell(14, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(14, 3, 67);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'checkMainClubs')
+data.setCell(15, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(15, 3, 61);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'checkMainHome')
+data.setCell(16, 2, 'xboxLiveTestFramework_Tests.UnitContentTest')
+data.setCell(16, 3, 38);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'removeSuggestions')
+data.setCell(17, 2, 'xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'findByText')
+data.setCell(18, 2, 'xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest')
+data.setCell(18, 3, 0);
+window.suiteTableData['All-Tests']= { tableData: data, tableDiv: 'times-div-All-Tests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <div id="times-div-All-Tests">
+              </div> <!-- times-div-All-Tests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for All-Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">4 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.RegressionTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.UnitContentTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.SignInProfileTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-All-Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">xboxLiveTestFramework_Tests.BaseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">18 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">signInToSetUp</span>
+                <span class="method-start">4275 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">32184 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">34129 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">34239 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">xboxLiveTestFramework_Tests.RegressionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">36403 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">regression</span>
+                <span class="method-start">39866 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">52044 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52410 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">xboxLiveTestFramework_Tests.SignInProfileTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">52868 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpFromMainToProfile</span>
+                <span class="method-start">56230 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">89471 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">93838 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">signUpMainToXboxAchievements</span>
+                <span class="method-start">98000 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">124965 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">129780 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">signUpMainToXboxFriends</span>
+                <span class="method-start">132322 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">161021 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">166394 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">signUpMainToXboxHome</span>
+                <span class="method-start">168980 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">196012 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">200354 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">signUpMainToXboxMessages</span>
+                <span class="method-start">203029 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">225375 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">229707 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">signUpMainToXboxMyGames</span>
+                <span class="method-start">232477 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">256683 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">261335 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">signUpMainToXboxTrendOnLive</span>
+                <span class="method-start">264114 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">signOutAccount</span>
+                <span class="method-start">381472 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">386104 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">389490 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">xboxLiveTestFramework_Tests.UnitContentTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">390138 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setupMainWebPage</span>
+                <span class="method-start">393653 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkMainAchievements</span>
+                <span class="method-start">401610 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">401694 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainClubs</span>
+                <span class="method-start">402082 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402143 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainFriends</span>
+                <span class="method-start">402156 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402223 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainHome</span>
+                <span class="method-start">402231 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402269 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainMessages</span>
+                <span class="method-start">402278 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402360 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainMyGame</span>
+                <span class="method-start">402374 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402459 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainProfile</span>
+                <span class="method-start">402475 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402558 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkMainTrending</span>
+                <span class="method-start">402567 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402640 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">checkSignInComponent</span>
+                <span class="method-start">402653 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">402787 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">402803 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">findByText</span>
+                <span class="method-start">-1515963318132 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">removeSuggestions</span>
+                <span class="method-start">-1515963318132 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

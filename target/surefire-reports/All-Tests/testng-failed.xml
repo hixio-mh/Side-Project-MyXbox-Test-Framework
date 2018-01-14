@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All-Tests]">
+  <test verbose="0" name="Tests(failed)">
+    <classes>
+      <class name="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="cleanUp"/>
+          <include name="removeSuggestions"/>
+          <include name="tearDown"/>
+          <include name="findByText"/>
+          <include name="beforeTest"/>
+          <include name="signInToSetUp"/>
+        </methods>
+      </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
+    </classes>
+  </test> <!-- Tests(failed) -->
+</suite> <!-- Failed suite [All-Tests] -->

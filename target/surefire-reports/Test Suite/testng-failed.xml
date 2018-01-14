@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Test Suite]">
+  <test verbose="0" name="Tests(failed)">
+    <classes>
+      <class name="xboxLiveTestFramework_Tests.SignInProfileTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="signOutAccount"/>
+          <include name="cleanUp"/>
+          <include name="signUpMainToXboxHome"/>
+          <include name="signUpMainToXboxMessages"/>
+          <include name="signUpMainToXboxMyGames"/>
+          <include name="signUpMainToXboxAchievements"/>
+          <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="signUpFromMainToProfile"/>
+          <include name="signUpMainToXboxFriends"/>
+          <include name="signUpMainToXboxTrendOnLive"/>
+        </methods>
+      </class> <!-- xboxLiveTestFramework_Tests.SignInProfileTest -->
+    </classes>
+  </test> <!-- Tests(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

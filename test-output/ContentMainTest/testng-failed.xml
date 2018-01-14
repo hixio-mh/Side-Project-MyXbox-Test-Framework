@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [ContentMainTest]">
+  <test name="CheckMainPageContent(failed)">
+    <groups>
+      <run>
+        <include name="contentcheck"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="xboxLiveTestFramework_Tests.UnitContentTest">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="checkMainProfile"/>
+          <include name="checkMainHome"/>
+          <include name="checkSignInComponent"/>
+          <include name="checkMainAchievements"/>
+          <include name="setupMainWebPage"/>
+          <include name="beforeTest"/>
+          <include name="checkMainFriends"/>
+          <include name="checkMainTrending"/>
+          <include name="setUp"/>
+          <include name="checkMainMessages"/>
+          <include name="checkMainClubs"/>
+          <include name="tearDown"/>
+          <include name="checkMainMyGame"/>
+        </methods>
+      </class> <!-- xboxLiveTestFramework_Tests.UnitContentTest -->
+    </classes>
+  </test> <!-- CheckMainPageContent(failed) -->
+</suite> <!-- Failed suite [ContentMainTest] -->
