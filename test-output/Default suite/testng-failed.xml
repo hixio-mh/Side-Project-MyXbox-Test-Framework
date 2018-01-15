@@ -3,14 +3,17 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="xboxLiveTestFramework.UnitContentTest">
+      <class name="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest">
         <methods>
-          <include name="cleanUp"/>
           <include name="setUp"/>
-          <include name="checkMainContent"/>
+          <include name="cleanUp"/>
+          <include name="removeSuggestions"/>
           <include name="tearDown"/>
+          <include name="findByText"/>
+          <include name="beforeTest"/>
+          <include name="signInToSetUp"/>
         </methods>
-      </class> <!-- xboxLiveTestFramework.UnitContentTest -->
+      </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

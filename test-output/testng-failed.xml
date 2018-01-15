@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]">
-  <test name="Tests(failed)">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="xboxLiveTestFramework_Tests.UnitContentTest">
+      <class name="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest">
         <methods>
-          <include name="cleanUp"/>
-          <include name="checkMainProfile"/>
-          <include name="checkMainHome"/>
-          <include name="checkSignInComponent"/>
-          <include name="checkMainAchievements"/>
-          <include name="setupMainWebPage"/>
-          <include name="beforeTest"/>
-          <include name="checkMainFriends"/>
-          <include name="checkMainTrending"/>
           <include name="setUp"/>
-          <include name="checkMainMessages"/>
-          <include name="checkMainClubs"/>
+          <include name="cleanUp"/>
+          <include name="removeSuggestions"/>
           <include name="tearDown"/>
-          <include name="checkMainMyGame"/>
+          <include name="findByText"/>
+          <include name="beforeTest"/>
+          <include name="signInToSetUp"/>
         </methods>
-      </class> <!-- xboxLiveTestFramework_Tests.UnitContentTest -->
+      </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
     </classes>
-  </test> <!-- Tests(failed) -->
-</suite> <!-- Failed suite [Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

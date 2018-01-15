@@ -8,9 +8,9 @@ public class DummyTestAccount {
 	//Edit this class to your dummy email and pw for sign process.
 	public DummyTestAccount () {
 		//Edit Here
-		this.email = "anything";
-		this.pW = "anything";
-		this.friendToAdd = "anything";
+		this.email = "yourdummyemail";
+		this.pW = "anypw";
+		this.friendToAdd = "IncensedPark285";
 	}
 	
 	public String getEmail() {

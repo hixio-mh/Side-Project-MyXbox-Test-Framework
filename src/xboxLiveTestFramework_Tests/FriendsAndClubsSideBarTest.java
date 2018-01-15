@@ -1,13 +1,14 @@
 package xboxLiveTestFramework_Tests;
 
-import static org.testng.Assert.assertEquals;
+
+import static org.testng.Assert.*;
 
 import org.testng.annotations.*;
 
 import xboxLivePageObjects_Lib.*;
 
 public class FriendsAndClubsSideBarTest extends BaseTest {
-  @BeforeMethod(groups= "friendsandclubs")
+  @Test(groups= {"search", "friendsandclubs", "remove"})
   public void signInToSetUp() {
 	  driver.navigate().to("https://www.xbox.com/en-US/live");
 	  synchronized (driver) {
@@ -28,24 +29,44 @@ public class FriendsAndClubsSideBarTest extends BaseTest {
 	  }
 	  assertEquals(signInConfirmationComponent.confirmationSignIn(), "PopulousToast73");
 	  synchronized (driver) {
-		  try {driver.wait(2000);} 
+		  try {driver.wait(5000);} 
 		  catch (InterruptedException e) { e.printStackTrace();}
 	  }
   }
   
-  @Test(groups= "friendsandclubs")
+  @BeforeMethod(alwaysRun=true)
+  public void waitForASec() {
+	  synchronized (driver) {
+		  try {driver.wait(5000);} 
+		  catch (InterruptedException e) { e.printStackTrace();}
+	  }
+  }
+  
+  @Test(groups= {"search", "friendsandclubs"})
   public void findByText() {
+	  
 	  FriendsandClubsComponent friendsAndClubsSideBar = new FriendsandClubsComponent(driver);
 	  
-	  friendsAndClubsSideBar.searchByText(dummyAccount.getNameToAddFriend());
-	  
-	  //Work on search text results.
+	  friendsAndClubsSideBar = friendsAndClubsSideBar.searchByText(dummyAccount.getNameToAddFriend());
+	  assertTrue(friendsAndClubsSideBar.matchInList(dummyAccount.getNameToAddFriend()));
 	  
   }
   
-  @Test(groups= "friendsandclubs")
+  @Test(groups= {"friendsandclubs", "remove"})
   public void removeSuggestions() {
+	  synchronized (driver) {
+		  try {driver.wait(4000);} 
+		  catch (InterruptedException e) { e.printStackTrace();}
+	  }
 	  //Work on removal,view and add friends in suggested list
+	  FriendsandClubsComponent friendsAndClubsSideBar = new FriendsandClubsComponent(driver);
+	  //need to work removal by choose of numbers not names.
+	  friendsAndClubsSideBar = friendsAndClubsSideBar.removeSuggestedAccount();
+	  synchronized (driver) {
+		  try {driver.wait(2000);} 
+		  catch (InterruptedException e) { e.printStackTrace();}
+	  }
+	  
   }
   
 }

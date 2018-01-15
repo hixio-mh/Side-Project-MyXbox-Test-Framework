@@ -2,11 +2,13 @@ package xboxLivePageObjects_Lib;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 
 public class FriendsandClubsComponent extends PageObject {
 	
@@ -16,7 +18,7 @@ public class FriendsandClubsComponent extends PageObject {
 	@FindBy(name="searchtext")
 	private WebElement findPeopleOrClubs;
 	
-	@FindBy(className="c-glyph")
+	@FindBy(xpath="//*[@id=\"Xbox-Friends-ku6a8ul\"]/div/div[2]/form/button")
 	private WebElement searchButton;
 	
 	//General filter button
@@ -61,7 +63,7 @@ public class FriendsandClubsComponent extends PageObject {
 	@FindBy(id="friendsbackactionlink")
 	private WebElement backSeeAllButton;
 	//To store a list of names
-	private List<String> nameList = new ArrayList<String>();
+	private List<String> nameList;
 	
 	//Rework:put the option to view profile, remove suggestion profile, or add friends into one List.
 	private List<WebElement> suggestedAccounts;
@@ -81,27 +83,31 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	public FriendsandClubsComponent (WebDriver driver) {
 		super(driver);
-		this.suggestedAccounts = driver.findElements(By.className("xboxpeople default"));
-		for(WebElement e : this.suggestedAccounts) {
-			String xboxAccountName = e.findElement(By.className("name")).getText();
-			this.nameList.add(xboxAccountName);
+		suggestedAccounts = friendsAndClubsSection.findElements(By.cssSelector(".xboxpeople.default"));
+		this.nameList = new ArrayList<String>();
+		this.nameList.clear();
+		for(WebElement e : suggestedAccounts) {
+			String xboxAccountName = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
+			nameList.add(xboxAccountName);
 		}
 	}
-	
-	public FriendsandClubsComponent removeSuggestedAccount(String targetname) {
-		for (WebElement e : this.suggestedAccounts) {
-			String xboxAccountName = driver.findElement(By.className("name")).getText();
-			String xboxAccountSubName = driver.findElement(By.className("subname")).getText();
-			if(targetname.equalsIgnoreCase(xboxAccountName) || targetname.equalsIgnoreCase(xboxAccountSubName)) {
+	//rework (since suggested will be random on players. And to avoid more likely fail exceptions.
+	public FriendsandClubsComponent removeSuggestedAccount() {
+		Random rand = new Random();
+		int randNum = rand.nextInt(suggestedAccounts.size());
+		int counterWEList = 0;
+		for (WebElement e : suggestedAccounts) {
+			if(counterWEList == randNum) {
 				e.findElement(By.id("removesuggestionactionbutton")).click();
 				break;
 			}
+			counterWEList++;
 		}
 		return new FriendsandClubsComponent(driver);
 	}
-	
+	//rework (since suggested will be random on players.)
 	public FriendsandClubsComponent addSuggestedAccount (String targetname) {
-		for (WebElement e : this.suggestedAccounts) {
+		for (WebElement e : suggestedAccounts) {
 			String xboxAccountName = driver.findElement(By.className("name")).getText();
 			String xboxAccountSubName = driver.findElement(By.className("subname")).getText();
 			if(targetname.equalsIgnoreCase(xboxAccountName) || targetname.equalsIgnoreCase(xboxAccountSubName)) {
@@ -113,7 +119,7 @@ public class FriendsandClubsComponent extends PageObject {
 	}
 	
 	public FriendsandClubsComponent viewSuggestedAccount (String targetname) {
-		for (WebElement e : this.suggestedAccounts) {
+		for (WebElement e : suggestedAccounts) {
 			String xboxAccountName = driver.findElement(By.className("name")).getText();
 			String xboxAccountSubName = driver.findElement(By.className("subname")).getText();
 			if(targetname.equalsIgnoreCase(xboxAccountName) || targetname.equalsIgnoreCase(xboxAccountSubName)) {
@@ -125,8 +131,8 @@ public class FriendsandClubsComponent extends PageObject {
 	}
 	
 	public FriendsandClubsComponent searchByText (String targetname) {
-		this.findPeopleOrClubs.sendKeys(targetname);
-		this.searchButton.click();
+		findPeopleOrClubs.sendKeys(targetname);
+		searchButton.click();
 		
 		return new FriendsandClubsComponent(driver);
 	}
@@ -136,15 +142,16 @@ public class FriendsandClubsComponent extends PageObject {
 		boolean matchFound = false;
 		int matches = 0;
 		for(int i=0; i < nameList.size(); i++) {
-			if(targetname.equalsIgnoreCase(nameList.get(i))) {
+			System.out.println(nameList.get(i));
+			if(targetname.equalsIgnoreCase(nameList.get(i).toString())) {
 				matches++;
-				System.out.println("Profile " + (i+1) + nameList.get(i));
+				System.out.println("Profile " + (i+1) + ": " + nameList.get(i));
 			}
 		}
-		if(matches < 0) {
+		if(matches > 0) {
 			matchFound = true;
 		} else {
-			System.out.println(driver.findElement(By.xpath("//*[@id=\"friends\"]/span")));
+			System.out.println(nameList.toString());
 		}
 		return matchFound;
 	}
@@ -157,7 +164,7 @@ public class FriendsandClubsComponent extends PageObject {
 	}
 	
 	public FriendsandClubsComponent generalFilter(String specificFilter) {
-		this.searchFilterButton.click();
+		searchFilterButton.click();
 		if (specificFilter.equalsIgnoreCase("All")) {
 			this.allFilter.click();
 		}
@@ -185,13 +192,13 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	
 	public FriendsandClubsComponent seeAllSuggestions() {
-		this.seeAllFriendsAndSuggestionsButton.click();
+		seeAllFriendsAndSuggestionsButton.click();
 		return new FriendsandClubsComponent(driver);
 	}
 	
 	
 	public FriendsandClubsComponent allPeopleFilter (String specificFilter) {
-		this.allPeopleFilterButton.click();
+		allPeopleFilterButton.click();
 		if(specificFilter.equalsIgnoreCase("All people")) {
 			this.allPeopleFilter.click();
 		}
@@ -203,18 +210,18 @@ public class FriendsandClubsComponent extends PageObject {
 		}
 		else {
 			System.out.println("There is no filter by that specification. Please try again.");
-			this.allPeopleFilterButton.click();
+			allPeopleFilterButton.click();
 		}
 		return new FriendsandClubsComponent(driver);
 	}
 	
 	public FriendsandClubsComponent goBackToGeneralFilter() {
-		this.backSeeAllButton.click();
+		backSeeAllButton.click();
 		return new FriendsandClubsComponent(driver);
 	}
 	
 	public void findFaceBookFriends() {
-		this.findFacebookFriends.click();
+		findFacebookFriends.click();
 	}
 
 }
