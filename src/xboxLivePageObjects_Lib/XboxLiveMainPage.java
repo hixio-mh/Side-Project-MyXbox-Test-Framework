@@ -8,31 +8,31 @@ import org.openqa.selenium.support.FindBy;
 
 public class XboxLiveMainPage extends PageObject{
 	
-	@FindBy(id="shellmenu_86")
+	@FindBy(id="shellmenu_85")
 	private WebElement myXboxMenu;
 	
-	@FindBy(id="shellmenu_87")
+	@FindBy(id="shellmenu_86")
 	private WebElement myXboxHome;
 	
-	@FindBy(id="shellmenu_88")
+	@FindBy(id="shellmenu_87")
 	private WebElement myXboxProfile;
 	
-	@FindBy(id="shellmenu_89")
+	@FindBy(id="shellmenu_88")
 	private WebElement myXboxAchievements;
 	
-	@FindBy(id="shellmenu_90")
+	@FindBy(id="shellmenu_89")
 	private WebElement myXboxFriends;
 	
-	@FindBy(id="shellmenu_91")
+	@FindBy(id="shellmenu_90")
 	private WebElement myXboxMessages;
 	
-	@FindBy(id="shellmenu_92")
+	@FindBy(id="shellmenu_91")
 	private WebElement myXboxMyGames;
 	
-	@FindBy(id="shellmenu_93")
+	@FindBy(id="shellmenu_92")
 	private WebElement myXboxClubs;
 	
-	@FindBy(id="shellmenu_94")
+	@FindBy(id="shellmenu_93")
 	private WebElement myXboxTrendingOnXboxLive;
 	
 	public XboxLiveMainPage(WebDriver driver) {

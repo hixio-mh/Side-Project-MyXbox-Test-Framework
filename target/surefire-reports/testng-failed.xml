@@ -4,19 +4,22 @@
   <test verbose="0" name="Tests(failed)">
     <groups>
       <run>
-        <include name="remove"/>
-        <include name="remove"/>
+        <include name="friendsandclubs"/>
+        <include name="friendsandclubs"/>
       </run>
     </groups>
     <classes>
       <class name="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest">
         <methods>
           <include name="setUp"/>
+          <include name="setUpAccount"/>
           <include name="cleanUp"/>
-          <include name="removeSuggestions"/>
+          <include name="seeAllFilter"/>
+          <include name="startPoint"/>
           <include name="tearDown"/>
+          <include name="findByText"/>
+          <include name="generalFilters"/>
           <include name="beforeTest"/>
-          <include name="waitForASec"/>
         </methods>
       </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
     </classes>

@@ -26,7 +26,7 @@ public class SignInConfirmationComponent extends PageObject {
 	}
 	
 	public String confirmationSignIn() {
-		return accountName.findElement(By.xpath("//*[@id=\"meControl\"]/div/div/div[1]")).getText();
+		return accountName.findElement(By.cssSelector(".msame_Header_name.msame_TxtTrunc")).getText();
 	}
 	
 	public void signOut() throws InterruptedException {

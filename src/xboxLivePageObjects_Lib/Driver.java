@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 //Look up original file on QA 101 site.
 public class Driver implements WebDriver {
 	
@@ -20,8 +21,12 @@ public class Driver implements WebDriver {
 			this.driver = new ChromeDriver();
 		}
 		
-		// TODO add the rest of the browser
 		
+		if(browserName.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "./resources/webdrivers/geckodriver.exe");
+			this.driver = new FirefoxDriver();
+		}
+		// TODO add the rest of the browser
 		
 	}
 
