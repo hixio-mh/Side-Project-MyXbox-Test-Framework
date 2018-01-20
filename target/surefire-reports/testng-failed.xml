@@ -14,12 +14,15 @@
           <include name="setUp"/>
           <include name="setUpAccount"/>
           <include name="cleanUp"/>
+          <include name="removeSuggestions"/>
           <include name="seeAllFilter"/>
+          <include name="viewAccounts"/>
           <include name="startPoint"/>
           <include name="tearDown"/>
           <include name="findByText"/>
           <include name="generalFilters"/>
           <include name="beforeTest"/>
+          <include name="navigatingToFaceBook"/>
         </methods>
       </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
     </classes>

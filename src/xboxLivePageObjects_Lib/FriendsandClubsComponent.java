@@ -22,14 +22,17 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	public WebElement findPeopleOrClubs = entireFriendSearchBar.findElement(By.tagName("input"));
 	public List<WebElement> searchOrDeleteText = entireFriendSearchBar.findElements(By.tagName("button"));
-	
+		
 	
 	//General filter button
 	@FindBy(id="All")
 	public WebElement searchFilterButton;
-
 	
-	//@FindBy(className="c-context-menu")
+	@FindBy(className="c-context-menu")
+	public WebElement filterMenu;
+	
+	public List<WebElement> filterLinks = filterMenu.findElements(By.className("f-context-text-only"));
+	
 	private WebElement allFilter; 
 	
 	@FindBy(id="ClubsFirst")
@@ -249,9 +252,19 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	public FriendsandClubsComponent generalFilter(String specificFilter) {
 		searchFilterButton.click();
-		if (specificFilter.equalsIgnoreCase("All")) {
-			this.allFilter = searchFilterButton.findElement(By.id("All"));
-			this.allFilter.click();
+		boolean match = false;
+		//This features has two identical ids called "All"
+		for(WebElement e : filterLinks) {
+			if (e.getAttribute("id").equalsIgnoreCase(specificFilter)) {
+				e.click();
+				match = true;
+				break;
+			}
+		}
+		
+		/*if (specificFilter.equalsIgnoreCase("All")) {
+			allFilter = searchFilterButton.findElement(By.tagName("ul")).findElement(By.id("All"));
+			allFilter.click();
 		}
 		else if(specificFilter.equalsIgnoreCase("Clubs first")) {
 			this.clubsFirstFilter.click();
@@ -267,11 +280,11 @@ public class FriendsandClubsComponent extends PageObject {
 		}
 		else if(specificFilter.equalsIgnoreCase("Mixer")) {
 			this.mixerFilter.click();
-		}
-		else {
+		} */
+		if (match == false){
 			this.searchFilterButton.click();
 			System.out.println("There is no filter by that specification. Please try again.");
-		}
+		} 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		return new FriendsandClubsComponent(driver);
