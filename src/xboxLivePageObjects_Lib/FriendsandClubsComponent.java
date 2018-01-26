@@ -28,13 +28,10 @@ public class FriendsandClubsComponent extends PageObject {
 	@FindBy(id="All")
 	public WebElement searchFilterButton;
 	
-	@FindBy(className="c-context-menu")
-	public WebElement filterMenu;
+	public WebElement filterMenu = friendsAndClubsSection.findElement(By.className("c-context-menu"));
 	
-	public List<WebElement> filterLinks = filterMenu.findElements(By.className("f-context-text-only"));
-	
-	private WebElement allFilter; 
-	
+	public List<WebElement> filterLinks = filterMenu.findElements(By.tagName("li"));
+	//Filters below not in use
 	@FindBy(id="ClubsFirst")
 	private WebElement clubsFirstFilter;
 	
@@ -165,29 +162,31 @@ public class FriendsandClubsComponent extends PageObject {
 		return new FriendsandClubsComponent(driver);
 	}
 	
-		public FriendsandClubsComponent viewAccount () {
-			List<WebElement> combinedLists = generalAccountList;
+	public FriendsandClubsComponent viewAccount () {
+		List<WebElement> combinedLists = generalAccountList;
+		if (suggestedAccounts != null) {
 			combinedLists.addAll(suggestedAccounts);
-			Random rand = new Random();
-			int randNum = rand.nextInt(combinedLists.size());
-			int counterWEList = 0;
-			for (WebElement e : combinedLists) {
-				if(counterWEList == randNum) {
-					recentlyViewed = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
-					recentlyViewedURL = e.findElement(By.tagName("a")).getAttribute("href");
-					e.findElement(By.tagName("a")).click();
-					synchronized (driver) {
-						  try {driver.wait(4000);} 
-						  catch (InterruptedException wait) { wait.printStackTrace();}
-					  }
-					System.out.println("Viewing Profile: " + getRecentProfileViewed());
-					System.out.println("Viewing Profile's URL: "+ recentlyViewedURL);
-					break;
-				}
-				counterWEList++;
-			}
-			return new FriendsandClubsComponent(driver);
 		}
+		Random rand = new Random();
+		int randNum = rand.nextInt(combinedLists.size());
+		int counterWEList = 0;
+		for (WebElement e : combinedLists) {
+			if(counterWEList == randNum) {
+				recentlyViewed = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
+				recentlyViewedURL = e.findElement(By.tagName("a")).getAttribute("href");
+				e.findElement(By.tagName("a")).click();
+				synchronized (driver) {
+						 try {driver.wait(4000);} 
+						 catch (InterruptedException wait) { wait.printStackTrace();}
+					 }
+				System.out.println("Viewing Profile: " + getRecentProfileViewed());
+				System.out.println("Viewing Profile's URL: "+ recentlyViewedURL);
+				break;
+			}
+			counterWEList++;
+		}
+		return new FriendsandClubsComponent(driver);
+	}
 	
 	
 	public void showNameList() {
@@ -253,39 +252,18 @@ public class FriendsandClubsComponent extends PageObject {
 	public FriendsandClubsComponent generalFilter(String specificFilter) {
 		searchFilterButton.click();
 		boolean match = false;
-		//This features has two identical ids called "All"
 		for(WebElement e : filterLinks) {
-			if (e.getAttribute("id").equalsIgnoreCase(specificFilter)) {
+			if (e.getAttribute("id").trim().equalsIgnoreCase(specificFilter)) {
 				e.click();
 				match = true;
 				break;
 			}
 		}
-		
-		/*if (specificFilter.equalsIgnoreCase("All")) {
-			allFilter = searchFilterButton.findElement(By.tagName("ul")).findElement(By.id("All"));
-			allFilter.click();
-		}
-		else if(specificFilter.equalsIgnoreCase("Clubs first")) {
-			this.clubsFirstFilter.click();
-		}
-		else if(specificFilter.equalsIgnoreCase("Friends first")) {
-			this.friendsFirstFilter.click();
-		}
-		else if(specificFilter.equalsIgnoreCase("Followers")) {
-			this.followersFilter.click();
-		}
-		else if(specificFilter.equalsIgnoreCase("Recent players")) {
-			this.recentPlayersFilter.click();
-		}
-		else if(specificFilter.equalsIgnoreCase("Mixer")) {
-			this.mixerFilter.click();
-		} */
 		if (match == false){
 			this.searchFilterButton.click();
 			System.out.println("There is no filter by that specification. Please try again.");
 		} 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 		
 		return new FriendsandClubsComponent(driver);
 	}
@@ -294,7 +272,7 @@ public class FriendsandClubsComponent extends PageObject {
 	public FriendsandClubsComponent seeAllSuggestions() {
 		seeAllFriendsAndSuggestionsButton.click();
 		synchronized (driver) {
-			  try {driver.wait(7000);} 
+			  try {driver.wait(3000);} 
 			  catch (InterruptedException e) { e.printStackTrace();}
 		}
 		return new FriendsandClubsComponent(driver);
@@ -317,7 +295,7 @@ public class FriendsandClubsComponent extends PageObject {
 			allPeopleFilterButton.click();
 		}
 		synchronized (driver) {
-			  try {driver.wait(5000);} 
+			  try {driver.wait(3000);} 
 			  catch (InterruptedException e) { e.printStackTrace();}
 		}
 		
@@ -334,7 +312,7 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	public FriendsandClubsComponent goBackToGeneralFilter() {
 		backSeeAllButton.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return new FriendsandClubsComponent(driver);
 	}
 	

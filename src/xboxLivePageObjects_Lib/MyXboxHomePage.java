@@ -10,6 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MyXboxHomePage extends PageObject {
+	//Entire Activity Feed and popular Mixer sections
+	@FindBy(id="primaryR1")
+	public WebElement entireActivityFeedAndMixer;
 	
 	//The commands for See all, scroll left or right and selecting specific tab can be done in methods
 	@FindBy(id="Xbox-XboxPopularFeed-wpydnul")
@@ -37,11 +40,11 @@ public class MyXboxHomePage extends PageObject {
 	
 	
 	
-	
+	//Rework since the ActivityFeedComponent is its own separate object.
 	public MyXboxHomePage(WebDriver driver) {
 		super(driver);
 		streamList = popularMixerStreamsSection.findElements(By.className("f-active"));
-		postedActivityFeed = homePageActivityFeed.findElements(By.className("xboxactivityfeeditem"));
+		postedActivityFeed = entireActivityFeedAndMixer.findElements(By.className("xboxactivityfeeditem"));
 		randomGibberish = randomSetup();
 	}
 	
@@ -49,10 +52,10 @@ public class MyXboxHomePage extends PageObject {
 		generalNewPostInput.sendKeys(message);
 		generalPostButton.click();
 		synchronized (driver) {
-			  try {driver.wait(6000);} 
+			  try {driver.wait(3000);} 
 			  catch (InterruptedException e) { e.printStackTrace();}
 		  }
-		postedActivityFeed.clear();;
+		postedActivityFeed.clear();
 		postedActivityFeed = homePageActivityFeed.findElements(By.className("xboxactivityfeeditem"));
 	}
 	

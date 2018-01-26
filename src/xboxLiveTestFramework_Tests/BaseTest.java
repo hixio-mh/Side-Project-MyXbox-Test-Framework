@@ -8,6 +8,8 @@ import xboxLivePageObjects_Lib.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.annotations.AfterClass;
 
 import DummyAccounts_Lib.*;
@@ -59,7 +61,7 @@ public class BaseTest {
 		  catch (InterruptedException e) { e.printStackTrace();}
 	  }
 	  assertTrue(signInConfirmationComponent.isInitialized());
-	  
+	  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	  assertEquals(signInConfirmationComponent.confirmationSignIn(), dummyAccount.getProfileName());
 	  
 	  synchronized (driver) {

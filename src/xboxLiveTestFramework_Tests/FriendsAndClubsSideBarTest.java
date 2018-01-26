@@ -14,7 +14,7 @@ public class FriendsAndClubsSideBarTest extends BaseTest {
 	@BeforeClass(groups = {"frinendsandclubs", "search", "remove", "filters"})
 	public void contentCheck() {
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {e.printStackTrace();}
 		System.out.println(driver.getCurrentUrl());
 		assertTrue(driver.getCurrentUrl().equals("https://account.xbox.com/en-us/social?xr=socialtwistnav") 
@@ -134,16 +134,16 @@ public class FriendsAndClubsSideBarTest extends BaseTest {
 	  assertEquals(friendsAndClubsSideBar.searchFilterButton.getText(), "All");
 	  
 	  
-	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("Clubs first");
+	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("ClubsFirst");
 	  assertEquals(friendsAndClubsSideBar.searchFilterButton.getText(), "Clubs first");
 	  
-	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("Friends first");
+	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("FriendsFirst");
 	  assertEquals(friendsAndClubsSideBar.searchFilterButton.getText(), "Friends first");
 	  
 	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("Followers");
 	  assertEquals(friendsAndClubsSideBar.searchFilterButton.getText(), "Followers");
 	  
-	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("Recent players");
+	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("RecentPlayers");
 	  assertEquals(friendsAndClubsSideBar.searchFilterButton.getText(), "Recent players");
 	  
 	  friendsAndClubsSideBar = friendsAndClubsSideBar.generalFilter("Mixer");
