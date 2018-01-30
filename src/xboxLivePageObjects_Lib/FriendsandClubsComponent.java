@@ -75,9 +75,8 @@ public class FriendsandClubsComponent extends PageObject {
 	//To store a list of names
 	public List<String> nameList;
 	
-	//Rework:put the option to view profile, remove suggestion profile, into one List.
 	public List<WebElement> suggestedAccounts;
-	//
+	
 	public List<WebElement> generalAccountList;
 	
 	
@@ -120,7 +119,6 @@ public class FriendsandClubsComponent extends PageObject {
 						sort.findElement(By.className("friendListTitleText")).getText().contains("Suggested for You")) {
 					suggestedAccounts = sort.findElements(By.cssSelector(".xboxpeople.default"));
 				}
-			  //When filters remove the default lists.
 			} catch(NoSuchElementException e) { }
 		}
 	}

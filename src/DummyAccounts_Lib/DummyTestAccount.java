@@ -5,14 +5,22 @@ public class DummyTestAccount {
 	private String pW;
 	private String friendToAdd;
 	private String profileName;
+	private String realName;
+	private String firstRealName;
 	
+	
+
+	
+
 	//Edit this class to your dummy email and pw for sign process.
 	public DummyTestAccount () {
 		//Edit Here
-		this.email = "Anything";
-		this.pW = "Anything";
-		this.friendToAdd = "Anything";
-		this.profileName = "Anything";
+		this.email = "";
+		this.pW = "";
+		this.friendToAdd = "";
+		this.profileName = "";
+		this.realName = "";
+		this.firstRealName = "";
 	}
 	
 	public String getEmail() {
@@ -31,5 +39,10 @@ public class DummyTestAccount {
 		return profileName;
 	}
 	
-	
+	public String getRealName() {
+		return realName;
+	}
+	public String getFirstRealName() {
+		return firstRealName;
+	}
 }

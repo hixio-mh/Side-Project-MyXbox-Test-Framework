@@ -45,21 +45,44 @@ public class MyXboxProfilePage extends PageObject {
 	public WebElement profileTabSelectorSection = entireProfileWebPage.findElement(By.className("m-heading-4"));
 	public List <WebElement> profileTabSelectionOptions = profileTabSelectorSection.findElements(By.tagName("a"));
 	
-	@FindBy(id="pivot-mainTab3")
+	@FindBy(id="mainTab3")
 	public WebElement activityFeedSection;
+	
+	@FindBy(id="mainTab2")
+	public WebElement achievementsSection;
+	
+	@FindBy(id="mainTab4")
+	public WebElement capturesSection;
 	
 	public MyXboxProfilePage (WebDriver driver) {
 		super(driver);
 		
 	}
 	
-	//Activity Feed Section
-	
-	
 	//Profile Card Section
+	public void customizeProfileInfo() {
+		customizeProfile.click();
+	}
 	
+	public void swtichTabs(String tab) {
+		for (WebElement e : profileTabSelectionOptions) {
+			if (e.getText().equals(tab)) {
+				if (!e.getAttribute("aria-selected").equals("true")) {
+					e.click();
+					break;
+				}
+				else {
+					System.out.println("This requested tab  has already been selected");
+					break;
+				}
+			}
+		}
+	}
+	
+	//Activity Feed Section (Maybe set a boolean that specific elements are displayed when selected for all three.
 	
 	//Achievement tab section
+	
 	
 	//Capture feed tab
 	

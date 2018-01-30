@@ -1,7 +1,8 @@
 package xboxLiveTestFramework_Tests;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 
 import xboxLivePageObjects_Lib.*;
 
@@ -14,6 +15,7 @@ import org.testng.annotations.AfterClass;
 
 import DummyAccounts_Lib.*;
 
+@Listeners({TestMethodListener.class})
 public class BaseTest {
 	Driver driver;
 	DummyTestAccount dummyAccount = new DummyTestAccount();
@@ -62,6 +64,10 @@ public class BaseTest {
 	  }
 	  assertTrue(signInConfirmationComponent.isInitialized());
 	  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	  if (!signInConfirmationComponent.confirmationSignIn().equals(dummyAccount.getProfileName())) {
+		  driver.navigate().refresh();
+		  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	  }
 	  assertEquals(signInConfirmationComponent.confirmationSignIn(), dummyAccount.getProfileName());
 	  
 	  synchronized (driver) {
@@ -70,10 +76,21 @@ public class BaseTest {
 	  }
   }
   
-  @BeforeTest(alwaysRun = true)
+  @BeforeMethod(alwaysRun = true)
   public void beforeTest()  {
-	  System.out.println("This is the before step:");
-	 
+	  SignInConfirmationComponent signInConfirmationComponent = new SignInConfirmationComponent(driver);
+	  System.out.println("This is the before step: " );
+	  boolean notProperlyDisplayed = true;
+	  while (notProperlyDisplayed == true) {
+		  if (!(signInConfirmationComponent.confirmationSignIn().equals(dummyAccount.getProfileName()))) {
+			  System.out.println("The webpage loaded incorrectly, refreshing: ");
+			  driver.navigate().refresh();
+			  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		  }
+		  if (signInConfirmationComponent.confirmationSignIn().equals(dummyAccount.getProfileName())){
+			  notProperlyDisplayed = false;
+		  }
+	  }
   }
   
   

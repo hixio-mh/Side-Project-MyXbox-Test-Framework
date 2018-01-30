@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
   <test name="TestSignInFromMainToProfile">
+	<groups>
+		<run>
+			<include name = "SignInAccount" />
+		</run>
+	</groups>  
+  
     <classes>
       <class name="xboxLiveTestFramework.SignInProfileTest"/>
     </classes>

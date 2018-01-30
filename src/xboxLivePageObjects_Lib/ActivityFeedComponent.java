@@ -2,6 +2,7 @@ package xboxLivePageObjects_Lib;
 
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -17,7 +18,7 @@ public class ActivityFeedComponent extends PageObject {
 	@FindBy(id="primaryArea")
 	public WebElement entireMyXboxWebPage;
 	
-	//activity feed section
+	
 	public WebElement activityFeedWholeContent = entireMyXboxWebPage.findElement(By.cssSelector(".xboxactivityfeed.fullwidth"));
 		
 	@FindBy(id="newpostinput")
@@ -27,15 +28,16 @@ public class ActivityFeedComponent extends PageObject {
 	private static String randomGibberish;
 	private static String recentGibberish = "";
 	public static String recentlyViewedPost = "";
+	public static String recentlyViewedMessage = "";
 	
 	public static String postURLLink = "";
 		
-	//Activity Feed posts
+	
 	public List<WebElement> postedActivityFeed;
 		
-	//setup a variables to help interact with posts on the main activity list.
+	
 		
-	//dialog box section	
+	
 	@FindBy(id="xboxdialog")
 	public WebElement viewSpecificFeedPost;
 	
@@ -45,15 +47,17 @@ public class ActivityFeedComponent extends PageObject {
 	public WebElement mainCommentInput;
 	public WebElement postMainComment;
 		
-	//check the className value for if conditions to unlike something and confirm a functional test passed.
+	
 	public WebElement likeButton;
-	//This feature might need to be removed since the function appears disabled
+	
 	public WebElement commentButton;
 		
 	public WebElement deleteButton;	
 	
+	public WebElement postedHyperLink;
+	
 	public WebElement shareActionButton;
-	//After clicking on the share button
+	
 	@FindBy(id="feedsharedialog")
 	public WebElement shareCommentSection;
 	public WebElement createShareComment;
@@ -67,18 +71,16 @@ public class ActivityFeedComponent extends PageObject {
 	
 	public List<WebElement> socialDialogList;
 		
-	//Expand the list after clicking "get more"	
 	@FindBy(id="getmore")
 	public WebElement getMore;
 		
-	//Variable for clicking on links to other sites
+	
 	public static String feedRecentViewedHyperlink = "";
 		
 		
-	// This piece is to perform on Home, my profile, and other profile web page.
+	
 	public ActivityFeedComponent (WebDriver driver) {
 		super(driver);
-		//ActivityFeed Portion
 		randomGibberish = randomSetup();
 		postedActivityFeed = activityFeedWholeContent.findElements(By.className("xboxactivityfeeditem"));
 			
@@ -92,7 +94,7 @@ public class ActivityFeedComponent extends PageObject {
 		return new ActivityFeedComponent(driver);
 	}
 	
-	//Creating a random set of string to reduce the chance of false asserts during test.
+	
 	public String randomSetup() {
 		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()abcdefghijklmnopqrstuvwxyz";
 		String newText = "";
@@ -103,7 +105,7 @@ public class ActivityFeedComponent extends PageObject {
 		}
 		return newText;
 	}
-	//Rework on using the set of gibberish strings	
+		
 	public void newPost() {
 		recentGibberish = randomGibberish;
 		generalNewPostInput.sendKeys(randomGibberish);
@@ -153,7 +155,7 @@ public class ActivityFeedComponent extends PageObject {
 	public ActivityFeedComponent deletePost() {
 		int listCounter = 0;
 		Random rand = new Random();
-		int randNum = rand.nextInt(postedActivityFeed.size());
+		int randNum = rand.nextInt(postedActivityFeed.size()/2);
 		for (WebElement e : postedActivityFeed) {
 			if (listCounter == randNum) {
 				recentlyViewedPost = e.getAttribute("data-shareroot");
@@ -190,12 +192,12 @@ public class ActivityFeedComponent extends PageObject {
 	public void expandPostedActivityFeed() {
 		getMore.click();
 		synchronized (driver) {
-			try {driver.wait(3000);} 
+			try {driver.wait(5000);} 
 			catch (InterruptedException r) { r.printStackTrace();}
 		}
 		postedActivityFeed = activityFeedWholeContent.findElements(By.className("xboxactivityfeeditem"));
 	}
-	//Rework on code to incorporate the String obtaining data-shareroot.	
+		
 	public void viewAnyPost() {
 		int feedIndex = 0;
 		Random rand = new Random();
@@ -206,13 +208,21 @@ public class ActivityFeedComponent extends PageObject {
 				declareDialogBoxElements();
 				recentlyViewedPost = e.getAttribute("data-shareroot");
 				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-				closeFeedPost.click();
 				break;
 			}
 			feedIndex++;
 		}
 	}
-	//When the dialog box appears:
+	
+	public void closeOpenedPost() {
+		if(viewSpecificFeedPost.getAttribute("aria-hidden").equals("false")) {
+			closeFeedPost.click();
+		}
+		else {
+			System.out.println("No dialog box was open to begin with.");
+		}
+	}
+	
 	public void declareDialogBoxElements() {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		if(viewSpecificFeedPost.getAttribute("aria-hidden").equals("false")) {
@@ -224,13 +234,14 @@ public class ActivityFeedComponent extends PageObject {
 			mainCommentInput = viewSpecificFeedPostOptions.findElement(By.id("commentinput"));
 			postMainComment = viewSpecificFeedPost.findElement(By.id("post"));
 				
-			//check the className value for if conditions to unlike something and confirm a functional test passed.
-			
 			likeButton = viewSpecificFeedPostOptions.findElement(By.id("likeactionlink"));
 			
 			shareActionButton = viewSpecificFeedPost.findElement(By.id("shareactionlink"));
 			try {
 				deleteButton = viewSpecificFeedPost.findElement(By.id("deleteactionlink"));
+			} catch (NoSuchElementException moveAlong) {  }
+			try {
+				postedHyperLink = viewSpecificFeedPost.findElement(By.cssSelector(".c-group.f-wrap-items"));
 			} catch (NoSuchElementException moveAlong) {  }
 			
 			socialDropDownMenu = viewSpecificFeedPost.findElement(By.id("SocialDropDown"));
@@ -249,10 +260,6 @@ public class ActivityFeedComponent extends PageObject {
 		postShareComment = shareCommentSection.findElement(By.id("newpost"));
 		closeShareSection = shareCommentSection.findElement(By.cssSelector(".c-glyph.glyph-cancel"));
 		
-	}
-	//Without clicking on the specific feed and open on the dialog box or comment
-	public void viewAnyPostAndRespond() {
-			
 	}
 		
 	public void viewAnyPostAndComment() {
@@ -277,7 +284,7 @@ public class ActivityFeedComponent extends PageObject {
 			feedIndex++;
 		}
 	}
-	//Check data share-dataroot first before going further
+	
 	public boolean veiwNewCommentDialogBox() {
 		int posts = 1;
 		int commentList = 1;
@@ -311,7 +318,6 @@ public class ActivityFeedComponent extends PageObject {
 		return foundNewComment;
 	}
 	
-	//Test for deleting specified comment inside the dialog box.
 	public boolean deleteRecentComment() {
 		boolean doesNotExist = false;
 		int posts = 1;
@@ -332,6 +338,10 @@ public class ActivityFeedComponent extends PageObject {
 						System.out.println("Found our recent post "+ f.findElement(By.className("comment")).getText()  + 
 								" on Post: "+ posts + " Comment: " + commentList + " From: " + f.findElement(By.className("name")).getText());
 						f.findElement(By.id("deleteactionlink")).click();
+						synchronized (driver) {
+							try {driver.wait(4000);} 
+							catch (InterruptedException r) { r.printStackTrace();}
+						}
 						closeFeedPost.click();
 						break Outer;
 					}
@@ -340,6 +350,7 @@ public class ActivityFeedComponent extends PageObject {
 			}
 			posts++;
 		}
+		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		if (veiwNewCommentDialogBox() == false) {
 			doesNotExist = true;
 			System.out.println("Recent comment made was successfully deleted.");
@@ -347,7 +358,6 @@ public class ActivityFeedComponent extends PageObject {
 		return doesNotExist;
 	}
 	
-	//Methods for selecting the like button
 	public void likeAnyPost() {
 		int feedIndex = 0;
 		Random rand = new Random();
@@ -359,9 +369,11 @@ public class ActivityFeedComponent extends PageObject {
 				declareDialogBoxElements();
 				if(likeButton.getAttribute("class").equals("ajaxbutton c-action-trigger c-glyph glyph-heart-fill profilecolor")) {
 					likeButton.click();
-					synchronized (driver) {
-						try {driver.wait(5000);} 
-						catch (InterruptedException r) { r.printStackTrace();}
+					while(!(likeButton.getAttribute("class").equals("ajaxbutton c-action-trigger c-glyph glyph-heart-fill x-hidden-focus"))){
+						synchronized (driver) {
+							try {driver.wait(4000);} 
+							catch (InterruptedException r) { r.printStackTrace();}
+						}
 					}
 				}
 				likeButton.click();
@@ -397,14 +409,18 @@ public class ActivityFeedComponent extends PageObject {
 	
 	
 	
-	//Mehtods for selecting the share button
 	public ActivityFeedComponent shareAnyPost() {
 		int feedIndex = 0;
 		Random rand = new Random();
-		int randNum = rand.nextInt(postedActivityFeed.size());
+		int randNum = rand.nextInt(postedActivityFeed.size()/2);
 		for (WebElement e : postedActivityFeed) {
 			if(feedIndex == randNum) {
 				recentlyViewedPost = e.getAttribute("data-shareroot");
+				
+				if (e.findElement(By.cssSelector(".feedmaincontent.userpost")) != null) {
+					recentlyViewedMessage = e.findElement(By.cssSelector(".feedmaincontent.userpost")).getText();
+				}
+				
 				e.findElement(By.id("shareactionlink")).click();
 				declareDialogBoxElements();
 				
@@ -452,6 +468,7 @@ public class ActivityFeedComponent extends PageObject {
 		Outer:
 		for(WebElement e : postedActivityFeed) {
 			if (e.getAttribute("data-shareroot").equals(recentlyViewedPost)) {
+				System.out.println(recentlyViewedPost);
 				e.click();
 				synchronized (driver) {
 					try {driver.wait(2000);} 
@@ -470,30 +487,75 @@ public class ActivityFeedComponent extends PageObject {
 				}
 			}
 		}
+		if(foundOriginal == false ) {
+			expandPostedActivityFeed();
+			Outer2:
+			for (WebElement e : postedActivityFeed) {
+				if (e.findElement(By.cssSelector("")).getText().equals(recentlyViewedMessage) &&
+						e.findElement(By.className("message")) == null) {
+					e.click();
+					synchronized (driver) {
+						try {driver.wait(2000);} 
+						catch (InterruptedException r) { r.printStackTrace();}
+					}
+					declareDialogBoxElements();
+					socialDropDownMenu.click();
+					viewShares.click();
+					socialDialogList = socialContentDialogList.findElements(By.tagName("li"));
+					for(WebElement r : socialDialogList) {
+						if(r.findElement(By.className("name")).getText().equals(profileName)) {
+							System.out.println("Found the original post shared by: " + profileName);
+							foundOriginal = true;
+							break Outer2;
+						}
+					}
+				}
+			}
+		}
 		
 		return foundOriginal;
 	}
-	//Rework to expand on using get more if currentlist offers none.
+	
 	public boolean hyperLinkDestination() {
 		boolean uRLMatch = false;
 		for (WebElement e: postedActivityFeed) {
+			outer:
 			try {
-				if(e.findElement(By.cssSelector(".actionlink.horizontal")).findElement(By.tagName("a")).isDisplayed()) {
-					postURLLink = e.findElement(By.cssSelector(".actionlink.horizontal")).findElement(By.tagName("a")).getText();
-					e.findElement(By.cssSelector(".actionlink.horizontal")).findElement(By.tagName("a")).click();
+				if(e.findElement(By.cssSelector(".c-group.f-wrap-items")).findElement(By.tagName("a")).isDisplayed()) {
+					postURLLink = e.findElement(By.cssSelector(".c-group.f-wrap-items")).findElement(By.tagName("a")).getText();
+					System.out.println(postURLLink);
+					e.click();
+					declareDialogBoxElements();
+					postedHyperLink.click();
+					Set<String> browserTabs = (driver.getWindowHandles());
+					String currentHandle = driver.getWindowHandle();
+					for (String tab : browserTabs) {
+						if (!tab.equals(currentHandle)) {
+							driver.switchTo().window((tab));
+						}
+					}
+					synchronized (driver) {
+						try {driver.wait(2000);} 
+						catch (InterruptedException r) { r.printStackTrace();}
+					}
+					System.out.println(driver.getCurrentUrl());
 					if (postURLLink.equals(driver.getCurrentUrl())) {
 						uRLMatch = true;
 					}
-					driver.navigate().back();
+					driver.close();
+					driver.switchTo().window(currentHandle);
+					break;
 				}
-			} catch (NoSuchElementException moveAlong) {
-				continue;
+			} 
+			catch (NoSuchElementException moveAlong) {
+				break outer;
 			}
-		}
 		if (uRLMatch == false) {
 			System.out.println("No match with url link posted in activity feed.");
 		}
-		return uRLMatch;
 	}
+	return uRLMatch;
+	}
+	
 	
 }

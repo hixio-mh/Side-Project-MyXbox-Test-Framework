@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="127.697" tests="12" errors="0" skipped="6" failures="6">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="531.921" tests="19" errors="0" skipped="3" failures="2">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_161\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rigat\AppData\Local\Temp\surefire1793915496250067923\surefirebooter2397802618197055729.jar C:\Users\Rigat\AppData\Local\Temp\surefire1793915496250067923 2018-01-19T21-37-59_968-jvmRun1 surefire745623396463498807tmp surefire_07464028699039861642tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rigat\AppData\Local\Temp\surefire3706699816186023278\surefirebooter2889196999747642166.jar C:\Users\Rigat\AppData\Local\Temp\surefire3706699816186023278 2018-01-29T23-05-09_295-jvmRun1 surefire1513742904827200719tmp surefire_06648909794568497181tmp"/>
     <property name="surefire.test.class.path" value="C:\eclipse\workspace\XboxLiveTestFramework\target\test-classes;C:\eclipse\workspace\XboxLiveTestFramework\target\classes;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-java\3.7.1\selenium-java-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-api\3.7.1\selenium-api-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.7.1\selenium-chrome-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.7.1\selenium-edge-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.7.1\selenium-firefox-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.7.1\selenium-ie-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.7.1\selenium-opera-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.7.1\selenium-remote-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.7.1\selenium-safari-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-support\3.7.1\selenium-support-3.7.1.jar;C:\Users\Rigat\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\Rigat\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Rigat\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Rigat\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Rigat\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Rigat\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Rigat\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Rigat\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Rigat\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rigat\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Rigat\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Rigat\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Rigat\.m2\repository\org\testng\testng\6.13.1\testng-6.13.1.jar;C:\Users\Rigat\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Rigat\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.20.1\surefire-testng-utils-2.20.1.jar;C:\Users\Rigat\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.20.1\surefire-grouper-2.20.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Rigat"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rigat\AppData\Local\Temp\surefire1793915496250067923\surefirebooter2397802618197055729.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rigat\AppData\Local\Temp\surefire3706699816186023278\surefirebooter2889196999747642166.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_161\lib\resources.jar;C:\Program Files\Java\jre1.8.0_161\lib\rt.jar;C:\Program Files\Java\jre1.8.0_161\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_161\lib\jce.jar;C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_161\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -42,7 +42,7 @@
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_161\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="browser" value="chrome"/>
+    <property name="browser" value="firefox"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\Rigat\.m2\repository"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
@@ -50,7 +50,7 @@
     <property name="java.version" value="1.8.0_161"/>
     <property name="user.dir" value="C:\eclipse\workspace\XboxLiveTestFramework"/>
     <property name="os.arch" value="amd64"/>
-    <property name="groups" value="friendsandclubs"/>
+    <property name="groups" value="homepage"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
@@ -62,125 +62,74 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="findByText" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="30.817">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;friendsseeallactionlink&quot;}&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39&#10;*** Element info: {Using=id, value=friendsseeallactionlink}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"id","selector":"friendsseeallactionlink"}
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 9323fffd0808a42cb40a96d2d24e7f39
-*** Element info: {Using=id, value=friendsseeallactionlink}
-	at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.findByText(FriendsAndClubsSideBarTest.java:85)
-</failure>
-    <system-out><![CDATA[This is the before step:
-Checking list from the Friends & Club Side Bar: 
-Profile 1: xTwinkle Toesx
-Profile 2: AlexShadow1993 Alex ?
-Profile 3: SkooIies J ? ? ? ? ? ? ? ?
-The See All Suggestion Button and Face Book isn't visiable
-Checking list from the Friends & Club Side Bar: 
-Profile 1: IncensedPark285
-Looking for a match with: IncensedPark285
-IncensedPark285
-Profile 1: IncensedPark285
-We found a match with IncensedPark285
+  <testcase name="checkPostedLinks" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="29.738"/>
+  <testcase name="deletePost" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.295"/>
+  <testcase name="expandList" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="5.476"/>
+  <testcase name="findByText" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="17.207"/>
+  <testcase name="generalFilters" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="56.356"/>
+  <testcase name="navigatingToFaceBook" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
+    <skipped message="Element &lt;a href=&quot;/en-us/friends/facebookfriends&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3"/>
+    <system-out><![CDATA[This is the before step: 
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1) on port 46812
-Only local connections are allowed.
-Jan 19, 2018 9:38:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
+  </testcase>
+  <testcase name="navigatingToFaceBook" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="4.543">
+    <failure message="Element &lt;a href=&quot;/en-us/friends/facebookfriends&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+Element <a href="/en-us/friends/facebookfriends"> could not be scrolled into view
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:237)
+]]></failure>
+    <system-out><![CDATA[This is the before step: 
+The webpage loaded incorrectly, refreshing: 
+]]></system-out>
+  </testcase>
+  <testcase name="openBoxAndComment" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.338"/>
+  <testcase name="openBoxAndCommentThenDelete" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
+    <skipped message="Unable to locate element: .comment&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3&#10;*** Element info: {Using=class name, value=comment}"/>
+    <system-out><![CDATA[This is the before step: 
+Found our recent post Ixlyg)eFrN on Post: 3 Comment: 1 From: PopulousToast73
+Found our recent post Ixlyg)eFrN on Post: 3 Comment: 1 From: PopulousToast73
+]]></system-out>
+    <system-err><![CDATA[JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/c4-f6736c/79-caa2e1/fd-475285/81-98d996/38-097622/75-bf67d6/9f-0da36b/55-e50491/51-caca9c/8b-c87139/4d-cfd487/86-136e0c/34-d6f81a/63-a7ed6b/8c-4144fa/7e-453e5d/93-5d32e4/3d-696aac/f1-ead36b/cb-ecd88b/54-11ea64/39-21e731/eb-d4a6ae/78-cafca3/a1-b5e7a7/35-ac2751/69-014b4f/85-c6428c/c9-4e1225/19-a3899b/c3-029418/2a-ed3773/8f-4b5c71/78-0a01cc/ec-2525e4/c5-9d9828/c1-41ea5b/71-373190/7e-8a8833/33-ee5970/c9-e52d5d/6c-bc50ae/6f-42a791/44-98032f/f7-ead613/dd-36a280/49-018b1f/cc-7896ad/49-c0ed25/79-721bfb/88-3ecb66/b9-5015f3/1c-51c70b/c3-2342e2/83-4a7dcb/c2-1ecc00/89-2ddc3f/e4-2741db/2c-7bc52b/11-ba7050/18-ab34fe/7b-adaed0/ef-11b512/be-46b408/d2-e3193b/cd-3f98bf/12-9b9450/4b-a50c28/16-bbbba7/4c-e99d80/2e-97cc03/5e-0fae47/d2-043c65/ba-549345/31-8b97b4/d3-a58210/5f-cb833b/b2-8927f0/25-fd6f99/74-f57ce7/f2-3ed2df/73-21b5ce/f9-1ae5be/2b-ecb1ed/85-6759e0/c0-3bfff0/43-6b6215/82-d1924f/27-c3b33e/56-c42c6a?ver=2.0, line 5: TypeError: i is undefined
+JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/c4-f6736c/79-caa2e1/fd-475285/81-98d996/38-097622/75-bf67d6/9f-0da36b/55-e50491/51-caca9c/8b-c87139/4d-cfd487/86-136e0c/34-d6f81a/63-a7ed6b/8c-4144fa/7e-453e5d/93-5d32e4/3d-696aac/f1-ead36b/cb-ecd88b/54-11ea64/39-21e731/eb-d4a6ae/78-cafca3/a1-b5e7a7/35-ac2751/69-014b4f/85-c6428c/c9-4e1225/19-a3899b/c3-029418/2a-ed3773/8f-4b5c71/78-0a01cc/ec-2525e4/c5-9d9828/c1-41ea5b/71-373190/7e-8a8833/33-ee5970/c9-e52d5d/6c-bc50ae/6f-42a791/44-98032f/f7-ead613/dd-36a280/49-018b1f/cc-7896ad/49-c0ed25/79-721bfb/88-3ecb66/b9-5015f3/1c-51c70b/c3-2342e2/83-4a7dcb/c2-1ecc00/89-2ddc3f/e4-2741db/2c-7bc52b/11-ba7050/18-ab34fe/7b-adaed0/ef-11b512/be-46b408/d2-e3193b/cd-3f98bf/12-9b9450/4b-a50c28/16-bbbba7/4c-e99d80/2e-97cc03/5e-0fae47/d2-043c65/ba-549345/31-8b97b4/d3-a58210/5f-cb833b/b2-8927f0/25-fd6f99/74-f57ce7/f2-3ed2df/73-21b5ce/f9-1ae5be/2b-ecb1ed/85-6759e0/c0-3bfff0/43-6b6215/82-d1924f/27-c3b33e/56-c42c6a?ver=2.0, line 5: TypeError: i is undefined
+JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/c4-f6736c/79-caa2e1/fd-475285/81-98d996/38-097622/75-bf67d6/9f-0da36b/55-e50491/51-caca9c/8b-c87139/4d-cfd487/86-136e0c/34-d6f81a/63-a7ed6b/8c-4144fa/7e-453e5d/93-5d32e4/3d-696aac/f1-ead36b/cb-ecd88b/54-11ea64/39-21e731/eb-d4a6ae/78-cafca3/a1-b5e7a7/35-ac2751/69-014b4f/85-c6428c/c9-4e1225/19-a3899b/c3-029418/2a-ed3773/8f-4b5c71/78-0a01cc/ec-2525e4/c5-9d9828/c1-41ea5b/71-373190/7e-8a8833/33-ee5970/c9-e52d5d/6c-bc50ae/6f-42a791/44-98032f/f7-ead613/dd-36a280/49-018b1f/cc-7896ad/49-c0ed25/79-721bfb/88-3ecb66/b9-5015f3/1c-51c70b/c3-2342e2/83-4a7dcb/c2-1ecc00/89-2ddc3f/e4-2741db/2c-7bc52b/11-ba7050/18-ab34fe/7b-adaed0/ef-11b512/be-46b408/d2-e3193b/cd-3f98bf/12-9b9450/4b-a50c28/16-bbbba7/4c-e99d80/2e-97cc03/5e-0fae47/d2-043c65/ba-549345/31-8b97b4/d3-a58210/5f-cb833b/b2-8927f0/25-fd6f99/74-f57ce7/f2-3ed2df/73-21b5ce/f9-1ae5be/2b-ecb1ed/85-6759e0/c0-3bfff0/43-6b6215/82-d1924f/27-c3b33e/56-c42c6a?ver=2.0, line 5: TypeError: i is undefined
 ]]></system-err>
   </testcase>
-  <testcase name="generalFilters" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="22.505">
-    <failure message="element not visible&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: 
-element not visible
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+  <testcase name="openBoxAndCommentThenDelete" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="24.635"/>
+  <testcase name="pickRandomMixerStream" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0.515"/>
+  <testcase name="postALike" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="15.022"/>
+  <testcase name="postNewMessage" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.428"/>
+  <testcase name="removeSuggestions" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="12.239"/>
+  <testcase name="seeAllFilter" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="52.81"/>
+  <testcase name="seeAllMixerStream" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="9.787"/>
+  <testcase name="sharePosts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="45.079"/>
+  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
+    <skipped message="Element &lt;a href=&quot;/en-us/Profile?GamerTag=ChrissyBoi87&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3"/>
+    <system-out><![CDATA[This is the before step: 
+Checking list from the Friends & Club Side Bar: 
+Profile 1: xTwinkle Toesx
+Profile 2: Paul Doyle Veronica Gomes
+Profile 3: ChrissyBoi87 FastFuriousCruisers CEO/Host
+]]></system-out>
+  </testcase>
+  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0.565">
+    <failure message="Element &lt;a href=&quot;/en-us/Profile?GamerTag=KiwiCrashDummy&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+Element <a href="/en-us/Profile?GamerTag=KiwiCrashDummy"> could not be scrolled into view
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 9323fffd0808a42cb40a96d2d24e7f39
-	at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.generalFilters(FriendsAndClubsSideBarTest.java:137)
-</failure>
-  </testcase>
-  <testcase name="navigatingToFaceBook" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="4.106">
-    <failure message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39&#10;*** Element info: {Using=name, value=friendsSearch}" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
-chrome not reachable
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 9323fffd0808a42cb40a96d2d24e7f39
-*** Element info: {Using=name, value=friendsSearch}
-	at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.navigatingToFaceBook(FriendsAndClubsSideBarTest.java:106)
-</failure>
-  </testcase>
-  <testcase name="startPoint" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="8.199">
-    <failure message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
-chrome not reachable
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 9323fffd0808a42cb40a96d2d24e7f39
-	at xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest.startPoint(FriendsAndClubsSideBarTest.java:32)
-</failure>
-  </testcase>
-  <testcase name="startPoint" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="startPoint" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="startPoint" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="removeSuggestions" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="0">
-    <skipped message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39"/>
-  </testcase>
-  <testcase name="seeAllFilter" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="0">
-    <skipped message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39"/>
-  </testcase>
-  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="0">
-    <skipped message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39"/>
-  </testcase>
-  <testcase name="cleanUp" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="12.344">
-    <failure message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
-chrome not reachable
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 9323fffd0808a42cb40a96d2d24e7f39
-</failure>
-  </testcase>
-  <testcase name="tearDown" classname="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest" time="12.592">
-    <failure message="chrome not reachable&#10;  (Session info: chrome=63.0.3239.132)&#10;  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}&#10;Session ID: 9323fffd0808a42cb40a96d2d24e7f39" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
-chrome not reachable
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Rigat\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 9323fffd0808a42cb40a96d2d24e7f39
-</failure>
+System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:219)
+]]></failure>
+    <system-out><![CDATA[This is the before step: 
+Checking list from the Friends & Club Side Bar: 
+Profile 1: xTwinkle Toesx
+Profile 2: KiwiCrashDummy
+Profile 3: ChrisWolvez www.twitch.tv/woivez
+]]></system-out>
   </testcase>
 </testsuite>

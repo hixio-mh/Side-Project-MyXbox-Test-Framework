@@ -4,27 +4,25 @@
   <test verbose="0" name="Tests(failed)">
     <groups>
       <run>
-        <include name="friendsandclubs"/>
-        <include name="friendsandclubs"/>
+        <include name="homepage"/>
+        <include name="homepage"/>
       </run>
     </groups>
     <classes>
-      <class name="xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest">
+      <class name="xboxLiveTestFramework_Tests.MyXboxHomePageTest">
         <methods>
           <include name="setUp"/>
           <include name="setUpAccount"/>
           <include name="cleanUp"/>
-          <include name="removeSuggestions"/>
-          <include name="seeAllFilter"/>
-          <include name="viewAccounts"/>
-          <include name="startPoint"/>
-          <include name="tearDown"/>
-          <include name="findByText"/>
-          <include name="generalFilters"/>
-          <include name="beforeTest"/>
           <include name="navigatingToFaceBook"/>
+          <include name="pause"/>
+          <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="openBoxAndCommentThenDelete"/>
+          <include name="startPoint"/>
+          <include name="viewAccounts"/>
         </methods>
-      </class> <!-- xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest -->
+      </class> <!-- xboxLiveTestFramework_Tests.MyXboxHomePageTest -->
     </classes>
   </test> <!-- Tests(failed) -->
 </suite> <!-- Failed suite [All-Tests] -->
