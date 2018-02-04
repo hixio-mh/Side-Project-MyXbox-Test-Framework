@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class CustomizeProfilePage extends PageObject {
 	
-	@FindBy(className="bodyContent")
+	@FindBy(className="mainContentContainer")
 	public WebElement entireCustomizeBodyPage;
 	
 	@FindBy(className="customizeprofileAvatar")
@@ -23,6 +23,7 @@ public class CustomizeProfilePage extends PageObject {
 	
 	public WebElement currentProfilePic =  profileImageAndNameSection.findElement(By.className("currentGamerPic"));
 	public String currentProfilePicSRC = currentProfilePic.getAttribute("src");
+	public static String oldProfilePicSRC = "";
 	@FindBy(id="changeGamerPicButton")
 	public WebElement changeGamerPic;
 	
@@ -43,7 +44,7 @@ public class CustomizeProfilePage extends PageObject {
 	public WebElement profileBioSection;
 	@FindBy(id="editBioButton")
 	public WebElement editBioButton;
-	public WebElement bioTextBox = profileBioSection.findElement(By.tagName("textarea"));
+	public WebElement bioTextBox = profileBioSection.findElement(By.className("bioTextBox"));
 	@FindBy(id="saveBioButton")
 	public WebElement saveBioInfo;
 	@FindBy(id="cancelBioButton")
@@ -62,10 +63,13 @@ public class CustomizeProfilePage extends PageObject {
 	public WebElement saveLocationInfo;
 	@FindBy(id="cancelProfileLocationButton")
 	public WebElement cancelLocationInfo;
-	public String currentLocationText = locationTextBox.getText();
+	public String currentLocationText = profileLocationSection.findElement(By.cssSelector(".locationInfoArea.customizeProfileTextStyle")).getText();
 	public static String recentLocationText = "";
 	
 	public static String recentTooMuchInfoText = "";
+	
+	@FindBy(id="loadingOverlay")
+	public WebElement loadingUpdates;
 	
 	public String newLocationInfo;
 	public String newBioInfo;
@@ -80,7 +84,7 @@ public class CustomizeProfilePage extends PageObject {
 	}
 	
 	public String randomLocationInfoSetup() {
-		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()abcdefghijklmnopqrstuvwxyz";
+		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&().,.,.,.abcdefghijklmnopqrstuvwxyz";
 		String newText = "";
 		Random rand = new Random();
 		while (newText.length() < 40) {
@@ -91,7 +95,7 @@ public class CustomizeProfilePage extends PageObject {
 	}
 	
 	public String randomBioInfoSetup() {
-		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()abcdefghijklmnopqrstuvwxyz";
+		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()..,.,.,.,.abcdefghijklmnopqrstuvwxyz";
 		String newText = "";
 		Random rand = new Random();
 		while (newText.length() < 50) {
@@ -102,7 +106,7 @@ public class CustomizeProfilePage extends PageObject {
 	}
 	
 	public String randomTooMuchInfoSetup() {
-		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()abcdefghijklmnopqrstuvwxyz";
+		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&().,.,.,.,.abcdefghijklmnopqrstuvwxyz";
 		String newText = "";
 		Random rand = new Random();
 		while (newText.length() < 501) {
@@ -114,6 +118,10 @@ public class CustomizeProfilePage extends PageObject {
 	
 	public void customizeAvatar() {
 		changeAvatarButton.click();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 	}
 	
 	public String getProfileName() {
@@ -122,11 +130,19 @@ public class CustomizeProfilePage extends PageObject {
 	
 	public void changeGamerTag() {
 		changeProfileName.click();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 	}
 	
-	//Figure how retain distinct src pics.
 	public void changeProfilePic() {
 		changeGamerPic.click();
+		oldProfilePicSRC = currentProfilePicSRC;
+		synchronized (driver) {
+			try {driver.wait(4000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		declareProfilePicCatalog();
 		int counter = 0;
 		Random rand = new Random();
@@ -139,7 +155,10 @@ public class CustomizeProfilePage extends PageObject {
 			}
 			counter++;
 		}
-		
+	}
+	
+	public void recheckProfilePic() {
+		currentProfilePicSRC = currentProfilePic.getAttribute("src");
 	}
 	
 	public void declareProfilePicCatalog() {
@@ -147,54 +166,126 @@ public class CustomizeProfilePage extends PageObject {
 		
 	}
 	
-	//Put in Bio and location edit methods.
+	public void recheckCurrentLocationText() {
+		currentLocationText = profileLocationSection.findElement(By.cssSelector(".locationInfoArea.customizeProfileTextStyle")).getText();
+	}
+	
+	public void recheckCurrentBioText() {
+		currentBioText = profileBioSection.findElement(By.cssSelector(".bioInfoArea.customizeProfileTextStyle")).getText();
+	}
+	
 	
 	public void enterLocationInfo() {
 		editLocationButton.click();
+		synchronized (driver) {
+			try {driver.wait(5000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		locationTextBox.clear();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		recentLocationText = newLocationInfo;
 		locationTextBox.sendKeys(newLocationInfo);
 		saveLocationInfo.click();
+		waitOverLay();
 	}
 	
 	public void enterButCancelLocation() {
 		editLocationButton.click();
+		synchronized (driver) {
+			try {driver.wait(5000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		locationTextBox.clear();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		recentLocationText = newLocationInfo;
 		locationTextBox.sendKeys(newLocationInfo);
 		cancelLocationInfo.click();
+		waitOverLay();
 	}
 	
 	public void enterBioInfo() {
 		editBioButton.click();
+		synchronized (driver) {
+			try {driver.wait(5000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		bioTextBox.clear();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		recentBioText = newBioInfo;
 		bioTextBox.sendKeys(newBioInfo);
 		saveBioInfo.click();
+		waitOverLay();
 	}
 	
 	public void enterButCancelBioInfo() {
 		editBioButton.click();
+		synchronized (driver) {
+			try {driver.wait(5000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		bioTextBox.clear();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		recentBioText = newBioInfo;
 		bioTextBox.sendKeys(newBioInfo);
 		cancelBioInfo.click();
+		waitOverLay();
 	}
 	
 	public void enterTooMuchInfoLocation() {
 		editLocationButton.click();
+		synchronized (driver) {
+			try {driver.wait(5000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		locationTextBox.clear();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		recentTooMuchInfoText = newTooMuchInfo;
 		locationTextBox.sendKeys(newTooMuchInfo);
 		saveLocationInfo.click();
+		waitOverLay();
 	}
 	
 	public void enterTooMuchInfoBio() {
 		editBioButton.click();
+		synchronized (driver) {
+			try {driver.wait(5000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		bioTextBox.clear();
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		recentTooMuchInfoText = newTooMuchInfo;
 		bioTextBox.sendKeys(newTooMuchInfo);
 		saveBioInfo.click();
+		waitOverLay();
+	}
+	
+	public void waitOverLay() {
+		while (!(loadingUpdates.getAttribute("style").equals("display: none;"))) {
+			synchronized (driver) {
+				try {driver.wait(9000);} 
+				catch (InterruptedException e) { e.printStackTrace();}
+			}
+		}
+
+		
 	}
 	
 	

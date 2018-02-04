@@ -1,19 +1,16 @@
 package xboxLivePageObjects_Lib;
 
 import java.util.List;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MyXboxProfilePage extends PageObject {
 	
-	//Maybe split off the activity feed portion as it's own separate Component object if enough className, ids, or names are identical across the 
-	//the webpages where these features are applied
+	
 	
 	@FindBy(id="primaryArea")
 	public WebElement entireProfileWebPage;
@@ -40,7 +37,13 @@ public class MyXboxProfilePage extends PageObject {
 	public WebElement privacySettings;
 	
 	@FindBy(id="item-values")
-	public WebElement friendsAndFollowersStats;
+	public WebElement friendsFollowersLocation;
+	
+	public List<WebElement> detailCardInfo = friendsFollowersLocation.findElements(By.className("item-value"));
+	
+	public String bioInfo = "";
+	
+	public String locationInfo = "";
 	
 	public WebElement profileTabSelectorSection = entireProfileWebPage.findElement(By.className("m-heading-4"));
 	public List <WebElement> profileTabSelectionOptions = profileTabSelectorSection.findElements(By.tagName("a"));
@@ -59,15 +62,18 @@ public class MyXboxProfilePage extends PageObject {
 		
 	}
 	
-	//Profile Card Section
 	public void customizeProfileInfo() {
 		customizeProfile.click();
+		synchronized (driver) {
+			try {driver.wait(4000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 	}
 	
 	public void swtichTabs(String tab) {
 		for (WebElement e : profileTabSelectionOptions) {
 			if (e.getText().equals(tab)) {
-				if (!e.getAttribute("aria-selected").equals("true")) {
+				if (e.getAttribute("aria-selected") == null || !e.getAttribute("aria-selected").equals("true")) {
 					e.click();
 					break;
 				}
@@ -79,18 +85,16 @@ public class MyXboxProfilePage extends PageObject {
 		}
 	}
 	
-	//Activity Feed Section (Maybe set a boolean that specific elements are displayed when selected for all three.
+	public void getLocationInfo() {
+		for (WebElement e : detailCardInfo) {
+			if(e.findElement(By.className("item-value-title")).getText().equals("Location")){
+				locationInfo = e.findElement(By.className("item-value-data")).getText();
+			}
+		}
+	}
 	
-	//Achievement tab section
+	public void getBioInfo() {
+		bioInfo = xboxProfileCardInfo.findElement(By.className("bio")).getText();
+	}
 	
-	
-	//Capture feed tab
-	
-	
-	
-	
-	
-	
-	//
-
 }

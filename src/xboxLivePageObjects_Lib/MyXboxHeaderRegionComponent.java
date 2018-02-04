@@ -1,67 +1,69 @@
 package xboxLivePageObjects_Lib;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MyXboxHeaderRegionComponent extends PageObject {
-	//Redo on values.
 	
 	
 	@FindBy(id="headerRegion")
-	private WebElement microsoftHeaderRegion;
+	public WebElement microsoftHeaderRegion;
 	
 	@FindBy(id="uhfCatLogo")
-	private WebElement xboxLogo;
+	public WebElement xboxLogo;
+	
+	@FindBy(id="shellmenu_42")
+	public WebElement home;
 	
 	@FindBy(id="shellmenu_43")
-	private WebElement home;
+	public WebElement profile;
 	
 	@FindBy(id="shellmenu_44")
-	private WebElement profile;
+	public WebElement achievements;
 	
 	@FindBy(id="shellmenu_45")
-	private WebElement achievements;
+	public WebElement friends;
 	
 	@FindBy(id="shellmenu_46")
-	private WebElement friends;
+	public WebElement messages;
 	
 	@FindBy(id="shellmenu_47")
-	private WebElement messages;
+	public WebElement myGames;
 	
 	@FindBy(id="shellmenu_48")
-	private WebElement myGames;
+	public WebElement clubs;
 	
 	@FindBy(id="shellmenu_49")
-	private WebElement clubs;
+	public WebElement trendingOnXboxLive;
 	
-	@FindBy(id="shellmenu_50")
-	private WebElement trendingOnXboxLive;
-	//In case during test we encounter a ElementNotVisiableException
-	@FindBy(xpath="//*[@id=\"coreui-universalheader-lb6x37l\"]/header/div[2]/div/button[2]")
-	private WebElement scrollRight;
+	public WebElement scrollRight;
 	
-	@FindBy(xpath="//*[@id=\"coreui-universalheader-lb6x37l\"]/header/div[2]/div/button[1]")
-	private WebElement scrollLeft;
+	public WebElement scrollLeft;
 	
-	private Map<String, WebElement> myXboxHeaderRegionBar = new HashMap<String, WebElement>();
+	public List<WebElement> scrollOptions;
+	
+	
+	public Map<String, WebElement> myXboxHeaderRegionBar = new HashMap<String, WebElement>();
 	
 	
 	public MyXboxHeaderRegionComponent (WebDriver driver) {
 		super(driver);
-		this.myXboxHeaderRegionBar.put("logo", this.xboxLogo);
-		this.myXboxHeaderRegionBar.put("home", this.home);
-		this.myXboxHeaderRegionBar.put("profile", this.profile);
-		this.myXboxHeaderRegionBar.put("achievements", this.achievements);
-		this.myXboxHeaderRegionBar.put("friends", this.friends);
-		this.myXboxHeaderRegionBar.put("messages", this.messages);
-		this.myXboxHeaderRegionBar.put("my games", this.myGames);
-		this.myXboxHeaderRegionBar.put("clubs", this.clubs);
-		this.myXboxHeaderRegionBar.put("trending on xbox live", this.trendingOnXboxLive);
+		myXboxHeaderRegionBar.put("logo", xboxLogo);
+		myXboxHeaderRegionBar.put("home", home);
+		myXboxHeaderRegionBar.put("profile", profile);
+		myXboxHeaderRegionBar.put("achievements", achievements);
+		myXboxHeaderRegionBar.put("friends", friends);
+		myXboxHeaderRegionBar.put("messages", messages);
+		myXboxHeaderRegionBar.put("my games", myGames);
+		myXboxHeaderRegionBar.put("clubs", clubs);
+		myXboxHeaderRegionBar.put("trending on xbox live", trendingOnXboxLive);
 		
 	}
 	
@@ -69,25 +71,52 @@ public class MyXboxHeaderRegionComponent extends PageObject {
 		return microsoftHeaderRegion.isDisplayed();
 	}
 	
-	//Work on this and make it more cleaner for code. Too many loops.
-	//Maybe switch to If case state or simple for loop.
-	public void goTo(String pageLocation) {
+	public MyXboxHeaderRegionComponent goTo(String pageLocation) {
 		boolean found = false;
 		OUTER:
 		while (found == false) {
 			REDO:
-			for(String match:this.myXboxHeaderRegionBar.keySet() ) {
+			for(String match:myXboxHeaderRegionBar.keySet() ) {
 			
 				try {
 					if(match.equalsIgnoreCase(pageLocation)) {
-						this.myXboxHeaderRegionBar.get(pageLocation).click();
+						myXboxHeaderRegionBar.get(pageLocation).click();
 						found = true;
 						break OUTER;
 					}
 				} catch (ElementNotVisibleException e) {
-					this.scrollRight.click();
+					scrollRight();
 					break REDO;
 				}
+			}
+		}
+		synchronized (driver) {
+			try {driver.wait(4000);} 
+			catch (InterruptedException r) { r.printStackTrace();}
+		}
+		return new MyXboxHeaderRegionComponent(driver);
+	}
+	
+	public void scrollArrows() {
+		scrollOptions = microsoftHeaderRegion.findElements(By.tagName("button"));
+	}
+	
+	public void scrollRight() {
+		scrollArrows();
+		for (WebElement e : scrollOptions) {
+			if(e.getAttribute("title").equals("Scroll right")) {
+				e.click();
+				break;
+			}
+		}
+	}
+	
+	public void scrollLeft() {
+		scrollArrows();
+		for (WebElement e : scrollOptions) {
+			if(e.getAttribute("title").equals("Scroll Left")) {
+				e.click();
+				break;
 			}
 		}
 	}

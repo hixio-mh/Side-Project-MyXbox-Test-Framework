@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//Look up original file on QA 101 site.
+
 public class Driver implements WebDriver {
 	
 	WebDriver driver;

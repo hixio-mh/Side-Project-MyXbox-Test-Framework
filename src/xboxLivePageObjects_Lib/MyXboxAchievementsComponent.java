@@ -14,8 +14,6 @@ public class MyXboxAchievementsComponent extends PageObject {
 	@FindBy(id="mainTab2")
 	public WebElement entireAchievementSection;
 	
-	@FindBy(id="xbox-TitleAggregation-2g3vz66")
-	public WebElement xboxTitleSection;
 	
 	@FindBy(id="GamerAchievementsFilter")
 	public WebElement achievementFilter;
@@ -30,7 +28,7 @@ public class MyXboxAchievementsComponent extends PageObject {
 	@FindBy(id="Xbox360")
 	public WebElement xbox360Filter;
 	
-	@FindBy(id="gameList")
+	@FindBy(id="gamesList")
 	public WebElement gameListSection;
 	public List<WebElement> gameList = gameListSection.findElements(By.tagName("li"));
 	
@@ -67,15 +65,19 @@ public class MyXboxAchievementsComponent extends PageObject {
 			}
 			counter++;
 		}
+		synchronized (driver) {
+			try {driver.wait(6000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
+		}
 		return new MyXboxAchievementsComponent(driver);
 	}
 	
 	public void pickAPlayer() {
-		compareSelector = driver.findElement(By.id("sectiondialog"));
+		compareSelector = driver.findElement(By.id("selectiondialog"));
 		if (compareSelector.getAttribute("aria-hidden").equals("false")){
 			compareList = compareSelector.findElements(By.tagName("li"));
 			compareOKButton = compareSelector.findElement(By.id("okbtn"));
-			compareCancelButton = compareSelector.findElement(By.id("cancelbtn"));
+			compareCancelButton = compareSelector.findElement(By.className("c-button"));
 		}
 		else {
 			System.out.println("The Selection dialog box is appearing as hidden.");
@@ -87,10 +89,12 @@ public class MyXboxAchievementsComponent extends PageObject {
 		int counter = 0;
 		Random rand = new Random();
 		int randNum = rand.nextInt(gameList.size());
+		System.out.println(gameList.size());
 		for (WebElement e : gameList) {
 			if (counter == randNum) {
 				recentGameViewed = e.findElement(By.tagName("a")).getAttribute("href");
-				e.click();
+				System.out.println(recentGameViewed);
+				e.findElement(By.tagName("a")).click();
 				break;
 			}
 		}
@@ -124,29 +128,36 @@ public class MyXboxAchievementsComponent extends PageObject {
 	public void currentComparison () {
 		try {
 			stopComparison = entireAchievementSection.findElement(By.id("stopcomparelink"));
-			currentComparison = xboxTitleSection.findElements(By.className("xboxpeople"));
+			currentComparison = entireAchievementSection.findElements(By.className("xboxpeople"));
+			
+			System.out.println("Current comparison is : " + currentComparison.get(0).findElement(By.tagName("a")).getAttribute("aria-label") 
+					+ " and : " + currentComparison.get(1).findElement(By.tagName("a")).getAttribute("aria-label"));
 			
 		}catch (NoSuchElementException r) {
 			System.out.println("The request to compare hasn't been given yet.");
 		}
 		
-		System.out.println("Current comparison is : " + currentComparison.get(0).findElement(By.tagName("a")).getAttribute("aria-label") 
-				+ " and : " + currentComparison.get(1).findElement(By.tagName("a")).getAttribute("aria-label"));
-		
 	}
 	
 	public boolean verifyPlayerComparison(String profileName) {
 		boolean match = false;
-		if(currentComparison == null) {
-			System.out.println("You haven't made a comparison with any player yet.");
-			return match;
-		}
-		for(WebElement e : currentComparison) {
-			if(profileName.equalsIgnoreCase(e.findElement(By.tagName("a")).getAttribute("aria-label"))) {
-				System.out.println("We have a match for: " + profileName);
-				match = true;
-				break;
+		
+		try {
+			System.out.println("Comparison List: "+currentComparison.size());
+			if(currentComparison.size() == 2) {
+				for(WebElement e : currentComparison) {
+					System.out.println(currentComparison);
+					System.out.println("Comparison List: "+currentComparison.size());
+					if(profileName.equalsIgnoreCase(e.findElement(By.tagName("a")).getAttribute("aria-label"))) {
+						System.out.println("We have a match for: " + profileName);
+						match = true;
+						break;
+					}
+				}
 			}
+		}
+		catch(NullPointerException r) {
+			System.out.println("You haven't made a comparison with any player yet.");
 		}
 		return match;
 	}
@@ -157,6 +168,10 @@ public class MyXboxAchievementsComponent extends PageObject {
 		}
 		else {
 			stopComparison.click();
+		}
+		synchronized (driver) {
+			try {driver.wait(6000);} 
+			catch (InterruptedException e) { e.printStackTrace();}
 		}
 		return new MyXboxAchievementsComponent (driver);
 	}

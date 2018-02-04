@@ -32,7 +32,7 @@ public class SignInConfirmationComponent extends PageObject {
 	public void signOut() throws InterruptedException {
 		accountName.click();
 		synchronized (driver) {
-			driver.wait(3000);
+			driver.wait(5000);
 		}
 		//Maybe do a try/catch for and the catch is ElementNotVisibleExceptions
 		signOut.click();

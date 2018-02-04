@@ -3,13 +3,13 @@ package xboxLivePageObjects_Lib;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 
 
 public class FriendsandClubsComponent extends PageObject {
@@ -33,27 +33,25 @@ public class FriendsandClubsComponent extends PageObject {
 	public List<WebElement> filterLinks = filterMenu.findElements(By.tagName("li"));
 	//Filters below not in use
 	@FindBy(id="ClubsFirst")
-	private WebElement clubsFirstFilter;
+	public  WebElement clubsFirstFilter;
 	
 	@FindBy(id="FriendsFirst")
-	private WebElement friendsFirstFilter;
+	public WebElement friendsFirstFilter;
 	
 	@FindBy(id="Followers")
-	private WebElement followersFilter;
+	public  WebElement followersFilter;
 	
 	@FindBy(id="RecentPlayers")
-	private WebElement recentPlayersFilter;
+	public  WebElement recentPlayersFilter;
 	
 	@FindBy(id="Mixer")
-	private WebElement mixerFilter;
+	public  WebElement mixerFilter;
 	
-	//Entire friendlist(including friends, suggestions, and facebook link)
 	@FindBy(id="friends")
-	public WebElement entireList;
+	public  WebElement entireList;
 	
 	public List<WebElement> gatherEntireList;
 	
-	//When see all filter is selected
 	@FindBy(id="friendsseeallactionlink")
 	public WebElement seeAllFriendsAndSuggestionsButton;
 	
@@ -69,10 +67,9 @@ public class FriendsandClubsComponent extends PageObject {
 	@FindBy(id="VIP")
 	public WebElement vIPFilter;
 	
-	//Going back to general filter options
 	@FindBy(id="friendsbackactionlink")
 	public WebElement backSeeAllButton;
-	//To store a list of names
+	
 	public List<String> nameList;
 	
 	public List<WebElement> suggestedAccounts;
@@ -96,7 +93,7 @@ public class FriendsandClubsComponent extends PageObject {
 	}
 	
 	
-	//create the lists for both suggestedAccounts and friend/results lists
+	
 	public void createSortFriendList() {
 		if (suggestedAccounts != null) {
 			suggestedAccounts.clear();
@@ -149,7 +146,7 @@ public class FriendsandClubsComponent extends PageObject {
 				recentSuggestedProfileRemoved = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
 				e.findElement(By.id("removesuggestionactionbutton")).click();
 				synchronized (driver) {
-					  try {driver.wait(4000);} 
+					  try {driver.wait(5000);} 
 					  catch (InterruptedException wait) { wait.printStackTrace();}
 				  }
 				System.out.println("Profile " + getRecentSuggestedProfileRemoved()+ " was removed from suggestions");
@@ -160,6 +157,7 @@ public class FriendsandClubsComponent extends PageObject {
 		return new FriendsandClubsComponent(driver);
 	}
 	
+	//Broken Code due to <a> tag links no longer functional
 	public FriendsandClubsComponent viewAccount () {
 		List<WebElement> combinedLists = generalAccountList;
 		if (suggestedAccounts != null) {
@@ -172,11 +170,11 @@ public class FriendsandClubsComponent extends PageObject {
 			if(counterWEList == randNum) {
 				recentlyViewed = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
 				recentlyViewedURL = e.findElement(By.tagName("a")).getAttribute("href");
-				e.findElement(By.tagName("a")).click();
+				act.moveToElement(e.findElement(By.tagName("a"))).click().perform();;
 				synchronized (driver) {
 						 try {driver.wait(4000);} 
 						 catch (InterruptedException wait) { wait.printStackTrace();}
-					 }
+				}
 				System.out.println("Viewing Profile: " + getRecentProfileViewed());
 				System.out.println("Viewing Profile's URL: "+ recentlyViewedURL);
 				break;
@@ -248,6 +246,7 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	
 	public FriendsandClubsComponent generalFilter(String specificFilter) {
+		
 		searchFilterButton.click();
 		boolean match = false;
 		for(WebElement e : filterLinks) {
@@ -261,7 +260,10 @@ public class FriendsandClubsComponent extends PageObject {
 			this.searchFilterButton.click();
 			System.out.println("There is no filter by that specification. Please try again.");
 		} 
-		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+		synchronized (driver) {
+			  try {driver.wait(5000);} 
+			  catch (InterruptedException e) { e.printStackTrace();}
+		}
 		
 		return new FriendsandClubsComponent(driver);
 	}
@@ -293,7 +295,7 @@ public class FriendsandClubsComponent extends PageObject {
 			allPeopleFilterButton.click();
 		}
 		synchronized (driver) {
-			  try {driver.wait(3000);} 
+			  try {driver.wait(8000);} 
 			  catch (InterruptedException e) { e.printStackTrace();}
 		}
 		
@@ -310,7 +312,10 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	public FriendsandClubsComponent goBackToGeneralFilter() {
 		backSeeAllButton.click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		synchronized (driver) {
+			  try {driver.wait(5000);} 
+			  catch (InterruptedException e) { e.printStackTrace();}
+		}
 		return new FriendsandClubsComponent(driver);
 	}
 	

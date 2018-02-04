@@ -2,7 +2,6 @@ package xboxLivePageObjects_Lib;
 
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -40,6 +39,7 @@ public class ActivityFeedComponent extends PageObject {
 	
 	@FindBy(id="xboxdialog")
 	public WebElement viewSpecificFeedPost;
+	public WebElement viewSpecificImagePost;
 	
 	public WebElement socialContentDialogList;
 	public WebElement closeFeedPost = viewSpecificFeedPost.findElement(By.cssSelector(".c-glyph.glyph-cancel"));
@@ -58,11 +58,12 @@ public class ActivityFeedComponent extends PageObject {
 	
 	public WebElement shareActionButton;
 	
-	@FindBy(id="feedsharedialog")
+	//Broken code due to website updates
+	//@FindBy(id="feedsharedialog")
 	public WebElement shareCommentSection;
 	public WebElement createShareComment;
 	public WebElement postShareComment;
-	public WebElement closeShareSection;
+	public WebElement closeShareSection; 
 		
 	public WebElement socialDropDownMenu;
 	public WebElement viewLikes;
@@ -227,6 +228,8 @@ public class ActivityFeedComponent extends PageObject {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		if(viewSpecificFeedPost.getAttribute("aria-hidden").equals("false")) {
 			
+			viewSpecificImagePost = viewSpecificFeedPost.findElement(By.id("popupimage"));
+			
 			socialContentDialogList = viewSpecificFeedPost.findElement(By.id("socialcontent"));
 			
 			viewSpecificFeedPostOptions = viewSpecificFeedPost.findElement(By.id("popupcontent"));
@@ -237,11 +240,15 @@ public class ActivityFeedComponent extends PageObject {
 			likeButton = viewSpecificFeedPostOptions.findElement(By.id("likeactionlink"));
 			
 			shareActionButton = viewSpecificFeedPost.findElement(By.id("shareactionlink"));
+			
+			
 			try {
-				deleteButton = viewSpecificFeedPost.findElement(By.id("deleteactionlink"));
+				deleteButton = viewSpecificFeedPostOptions.findElement(By.id("deleteactionlink"));
 			} catch (NoSuchElementException moveAlong) {  }
+			//Broken code due to <a> links not functioning
 			try {
-				postedHyperLink = viewSpecificFeedPost.findElement(By.cssSelector(".c-group.f-wrap-items"));
+				postedHyperLink = viewSpecificImagePost.findElement(By.tagName("xbox-action-link"))
+						.findElement(By.tagName("a"));
 			} catch (NoSuchElementException moveAlong) {  }
 			
 			socialDropDownMenu = viewSpecificFeedPost.findElement(By.id("SocialDropDown"));
@@ -254,12 +261,11 @@ public class ActivityFeedComponent extends PageObject {
 			System.out.println("The dialog box is still hidden.");
 		}
 	}
+	
 	public void declareShareDialogBoxElements() {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		createShareComment = shareCommentSection.findElement(By.id("newpostinput"));
-		postShareComment = shareCommentSection.findElement(By.id("newpost"));
-		closeShareSection = shareCommentSection.findElement(By.cssSelector(".c-glyph.glyph-cancel"));
-		
+		createShareComment = viewSpecificFeedPostOptions.findElement(By.id("newpostinput"));
+		postShareComment = viewSpecificFeedPostOptions.findElement(By.id("newpost"));
 	}
 		
 	public void viewAnyPostAndComment() {
@@ -299,15 +305,21 @@ public class ActivityFeedComponent extends PageObject {
 					socialDropDownMenu.click();
 					viewComments.click();
 				}
+				synchronized (driver) {
+					try {driver.wait(3000);} 
+					catch (InterruptedException r) { r.printStackTrace();}
+				}
 				socialDialogList = socialContentDialogList.findElements(By.tagName("li"));
 				for(WebElement f : socialDialogList) {
-					if (f.findElement(By.className("comment")).getText().equals(recentGibberish)) {
-						System.out.println("Found our recent post "+ f.findElement(By.className("comment")).getText()  + 
-								" on Post: "+ posts + " Comment: " + commentList + " From: " + f.findElement(By.className("name")).getText());
-						foundNewComment = true;
-						closeFeedPost.click();
-						break Outer;
-					}
+					try {
+						if (f.findElement(By.className("comment")).getText().equals(recentGibberish)) {
+							System.out.println("Found our recent post "+ f.findElement(By.className("comment")).getText()  + 
+									" on Post: "+ posts + " Comment: " + commentList + " From: " + f.findElement(By.className("name")).getText());
+							foundNewComment = true;
+							closeFeedPost.click();
+							break Outer;
+						}
+					} catch (NoSuchElementException r) { }
 					commentList++;
 				}
 				closeFeedPost.click();
@@ -417,16 +429,15 @@ public class ActivityFeedComponent extends PageObject {
 			if(feedIndex == randNum) {
 				recentlyViewedPost = e.getAttribute("data-shareroot");
 				
-				if (e.findElement(By.cssSelector(".feedmaincontent.userpost")) != null) {
+				try {
 					recentlyViewedMessage = e.findElement(By.cssSelector(".feedmaincontent.userpost")).getText();
-				}
+				} catch(NoSuchElementException r) {  }
 				
 				e.findElement(By.id("shareactionlink")).click();
 				declareDialogBoxElements();
 				
 				recentGibberish = randomGibberish;
 				shareActionButton.click();
-				
 				declareShareDialogBoxElements();
 				createShareComment.sendKeys(randomGibberish);
 				postShareComment.click();
@@ -434,7 +445,6 @@ public class ActivityFeedComponent extends PageObject {
 					try {driver.wait(5000);} 
 					catch (InterruptedException r) { r.printStackTrace();}
 				}
-				closeFeedPost.click();	
 				break;
 			}
 			feedIndex++;
@@ -476,6 +486,10 @@ public class ActivityFeedComponent extends PageObject {
 				}
 				declareDialogBoxElements();
 				socialDropDownMenu.click();
+				synchronized (driver) {
+					try {driver.wait(2000);} 
+					catch (InterruptedException r) { r.printStackTrace();}
+				}
 				viewShares.click();
 				socialDialogList = socialContentDialogList.findElements(By.tagName("li"));
 				for(WebElement r : socialDialogList) {
@@ -515,7 +529,7 @@ public class ActivityFeedComponent extends PageObject {
 		
 		return foundOriginal;
 	}
-	
+	//broken code due to <a> links non-functional
 	public boolean hyperLinkDestination() {
 		boolean uRLMatch = false;
 		for (WebElement e: postedActivityFeed) {
@@ -526,14 +540,21 @@ public class ActivityFeedComponent extends PageObject {
 					System.out.println(postURLLink);
 					e.click();
 					declareDialogBoxElements();
+					synchronized (driver) {
+						try {driver.wait(30000);} 
+						catch (InterruptedException r) { r.printStackTrace();}
+					}
 					postedHyperLink.click();
-					Set<String> browserTabs = (driver.getWindowHandles());
+					//act.moveToElement(postedHyperLink).click(postedHyperLink);
+					//act.perform();
+					//Old Code (Could be useful before due date)
+					/*Set<String> browserTabs = (driver.getWindowHandles());
 					String currentHandle = driver.getWindowHandle();
 					for (String tab : browserTabs) {
 						if (!tab.equals(currentHandle)) {
 							driver.switchTo().window((tab));
 						}
-					}
+					} */
 					synchronized (driver) {
 						try {driver.wait(2000);} 
 						catch (InterruptedException r) { r.printStackTrace();}
@@ -542,8 +563,10 @@ public class ActivityFeedComponent extends PageObject {
 					if (postURLLink.equals(driver.getCurrentUrl())) {
 						uRLMatch = true;
 					}
-					driver.close();
-					driver.switchTo().window(currentHandle);
+					//Part of old code
+					/*driver.close();
+					driver.switchTo().window(currentHandle); */
+					driver.navigate().back();
 					break;
 				}
 			} 

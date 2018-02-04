@@ -4,6 +4,7 @@
 	<groups>
 		<run>
 			<include name = "SignInAccount" />
+			<include name = "signincontent" />
 		</run>
 	</groups>  
   

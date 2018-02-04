@@ -17,7 +17,7 @@ import DummyAccounts_Lib.*;
 
 @Listeners({TestMethodListener.class})
 public class BaseTest {
-	Driver driver;
+	public Driver driver;
 	DummyTestAccount dummyAccount = new DummyTestAccount();
 	String browserName = getParamater("browser");
 
@@ -78,12 +78,17 @@ public class BaseTest {
   
   @BeforeMethod(alwaysRun = true)
   public void beforeTest()  {
+	  synchronized (driver) {
+		  try {driver.wait(4000);} 
+		  catch (InterruptedException e) { e.printStackTrace();}
+	  }
 	  SignInConfirmationComponent signInConfirmationComponent = new SignInConfirmationComponent(driver);
 	  System.out.println("This is the before step: " );
 	  boolean notProperlyDisplayed = true;
 	  while (notProperlyDisplayed == true) {
 		  if (!(signInConfirmationComponent.confirmationSignIn().equals(dummyAccount.getProfileName()))) {
 			  System.out.println("The webpage loaded incorrectly, refreshing: ");
+			  driver.manage().window().maximize();
 			  driver.navigate().refresh();
 			  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		  }

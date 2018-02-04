@@ -15,7 +15,6 @@ public class TestMethodListener implements IInvokedMethodListener {
 	}
 
 	public void afterInvocation(IInvokedMethod arg0, ITestResult arg1) {
-		// TODO Auto-generated method stub
 		
 	}
 	

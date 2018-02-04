@@ -1,7 +1,5 @@
 package xboxLivePageObjects_Lib;
 
-import static org.testng.Assert.fail;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,13 +48,13 @@ public class XboxLiveMainPage extends PageObject{
 	public boolean contentExists(String optionSelected) {
 		
 		if(optionSelected.equals("Home")) {
-			return this.myXboxHome.isDisplayed();
+			return myXboxHome.isDisplayed();
 		}
 		else if(optionSelected.equals("Profile")) {
-			return this.myXboxProfile.isDisplayed();
+			return myXboxProfile.isDisplayed();
 		}
 		else if(optionSelected.equals("Achievements")) {
-			return this.myXboxAchievements.isDisplayed();
+			return myXboxAchievements.isDisplayed();
 		}
 		else if(optionSelected.equals("Friends")) {
 			return myXboxFriends.isDisplayed();
@@ -74,7 +72,7 @@ public class XboxLiveMainPage extends PageObject{
 			return myXboxTrendingOnXboxLive.isDisplayed();
 		}
 		else {
-			pageError(optionSelected);
+			System.out.println("That option is unavailable");
 			return false;
 		}
 		
@@ -82,8 +80,10 @@ public class XboxLiveMainPage extends PageObject{
 	
 	public void selectMyXbox(String optionSelected) {
 		this.myXboxMenu.click();
-		try { super.pageWaitForThreeSec();
-		} catch (InterruptedException e) {e.printStackTrace();}
+		synchronized (driver) {
+			try {driver.wait(3000);} 
+			catch (InterruptedException r) { r.printStackTrace();}
+		}
 		
 		if(optionSelected.equals("Home")) {
 			this.myXboxHome.click();
@@ -110,15 +110,9 @@ public class XboxLiveMainPage extends PageObject{
 			this.myXboxTrendingOnXboxLive.click();
 		}
 		else {
-			pageError(optionSelected);
+			System.out.println("That option is unavailable");
 		}
 	}
 	
-	public void pageError(String selectIssue) {
-		selectIssue = "Variable_"+selectIssue;
-		System.out.println("An Error was encountered when trying to select: " + selectIssue + ". \n");
-		super.pageError(selectIssue);
-		fail("Selection Failed");
-	}
 
 }
