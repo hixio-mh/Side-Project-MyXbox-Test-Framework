@@ -18,7 +18,7 @@
           <include name="pause"/>
           <include name="tearDown"/>
           <include name="beforeTest"/>
-          <include name="openBoxAndCommentThenDelete"/>
+          <include name="sharePosts"/>
           <include name="startPoint"/>
           <include name="viewAccounts"/>
         </methods>

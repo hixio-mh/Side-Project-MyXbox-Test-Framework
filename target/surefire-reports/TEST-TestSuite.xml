@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="531.921" tests="19" errors="0" skipped="3" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="659.111" tests="19" errors="0" skipped="3" failures="3">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_161\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rigat\AppData\Local\Temp\surefire3706699816186023278\surefirebooter2889196999747642166.jar C:\Users\Rigat\AppData\Local\Temp\surefire3706699816186023278 2018-01-29T23-05-09_295-jvmRun1 surefire1513742904827200719tmp surefire_06648909794568497181tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rigat\AppData\Local\Temp\surefire2736223418886407975\surefirebooter6509652945808878976.jar C:\Users\Rigat\AppData\Local\Temp\surefire2736223418886407975 2018-02-14T16-14-26_585-jvmRun1 surefire7208734008922094524tmp surefire_06970358775519557525tmp"/>
     <property name="surefire.test.class.path" value="C:\eclipse\workspace\XboxLiveTestFramework\target\test-classes;C:\eclipse\workspace\XboxLiveTestFramework\target\classes;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-java\3.7.1\selenium-java-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-api\3.7.1\selenium-api-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.7.1\selenium-chrome-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.7.1\selenium-edge-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.7.1\selenium-firefox-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.7.1\selenium-ie-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.7.1\selenium-opera-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.7.1\selenium-remote-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.7.1\selenium-safari-driver-3.7.1.jar;C:\Users\Rigat\.m2\repository\org\seleniumhq\selenium\selenium-support\3.7.1\selenium-support-3.7.1.jar;C:\Users\Rigat\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\Rigat\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Rigat\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Rigat\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Rigat\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Rigat\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Rigat\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Rigat\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Rigat\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Rigat\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Rigat\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Rigat\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Rigat\.m2\repository\org\testng\testng\6.13.1\testng-6.13.1.jar;C:\Users\Rigat\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Rigat\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.20.1\surefire-testng-utils-2.20.1.jar;C:\Users\Rigat\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.20.1\surefire-grouper-2.20.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Rigat"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rigat\AppData\Local\Temp\surefire3706699816186023278\surefirebooter2889196999747642166.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rigat\AppData\Local\Temp\surefire2736223418886407975\surefirebooter6509652945808878976.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_161\lib\resources.jar;C:\Program Files\Java\jre1.8.0_161\lib\rt.jar;C:\Program Files\Java\jre1.8.0_161\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_161\lib\jce.jar;C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_161\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,74 +62,83 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="checkPostedLinks" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="29.738"/>
-  <testcase name="deletePost" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.295"/>
-  <testcase name="expandList" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="5.476"/>
-  <testcase name="findByText" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="17.207"/>
-  <testcase name="generalFilters" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="56.356"/>
+  <testcase name="checkPostedLinks" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="36.646"/>
+  <testcase name="deletePost" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="17.045"/>
+  <testcase name="expandList" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="5.389"/>
+  <testcase name="findByText" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="15.992"/>
+  <testcase name="generalFilters" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="66.417"/>
   <testcase name="navigatingToFaceBook" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
-    <skipped message="Element &lt;a href=&quot;/en-us/friends/facebookfriends&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3"/>
+    <skipped message="expected [You can now connect with your Facebook friends on Xbox Live. Click below to get started.] but found []"/>
     <system-out><![CDATA[This is the before step: 
 ]]></system-out>
   </testcase>
-  <testcase name="navigatingToFaceBook" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="4.543">
-    <failure message="Element &lt;a href=&quot;/en-us/friends/facebookfriends&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-Element <a href="/en-us/friends/facebookfriends"> could not be scrolled into view
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:237)
-]]></failure>
+  <testcase name="navigatingToFaceBook" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="8.39">
+    <failure message="expected [You can now connect with your Facebook friends on Xbox Live. Click below to get started.] but found []" type="java.lang.AssertionError">java.lang.AssertionError: expected [You can now connect with your Facebook friends on Xbox Live. Click below to get started.] but found []
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:274)
+</failure>
     <system-out><![CDATA[This is the before step: 
-The webpage loaded incorrectly, refreshing: 
 ]]></system-out>
   </testcase>
-  <testcase name="openBoxAndComment" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.338"/>
-  <testcase name="openBoxAndCommentThenDelete" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
-    <skipped message="Unable to locate element: .comment&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3&#10;*** Element info: {Using=class name, value=comment}"/>
+  <testcase name="openBoxAndComment" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="21.982"/>
+  <testcase name="openBoxAndCommentThenDelete" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="45.744"/>
+  <testcase name="pickRandomMixerStream" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0.104"/>
+  <testcase name="postALike" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="21.073"/>
+  <testcase name="postNewMessage" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.418"/>
+  <testcase name="removeSuggestions" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="8.904"/>
+  <testcase name="seeAllFilter" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="55.053"/>
+  <testcase name="seeAllMixerStream" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0.378"/>
+  <testcase name="sharePosts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
+    <skipped message="Element &lt;button id=&quot;getmore&quot; class=&quot;c-button x-hidden-focus&quot; name=&quot;getmore&quot;&gt; is not clickable at point (501.66668701171875,732.2833251953125) because another element &lt;div&gt; obscures it&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.38&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435"/>
     <system-out><![CDATA[This is the before step: 
-Found our recent post Ixlyg)eFrN on Post: 3 Comment: 1 From: PopulousToast73
-Found our recent post Ixlyg)eFrN on Post: 3 Comment: 1 From: PopulousToast73
+Found shared post on Feed: 1 by PopulousToast73
+/en-us/social/api/Comments?shareroot=userposts.xboxlive.com/users/xuid(2535407783985919)/posts/2535407783985919(0)_XboxLink.a6e3b2f5-bab5-4d27-afcb-6b5283301f30/timelines/User/2535407783985919&operation=Comments
 ]]></system-out>
-    <system-err><![CDATA[JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/c4-f6736c/79-caa2e1/fd-475285/81-98d996/38-097622/75-bf67d6/9f-0da36b/55-e50491/51-caca9c/8b-c87139/4d-cfd487/86-136e0c/34-d6f81a/63-a7ed6b/8c-4144fa/7e-453e5d/93-5d32e4/3d-696aac/f1-ead36b/cb-ecd88b/54-11ea64/39-21e731/eb-d4a6ae/78-cafca3/a1-b5e7a7/35-ac2751/69-014b4f/85-c6428c/c9-4e1225/19-a3899b/c3-029418/2a-ed3773/8f-4b5c71/78-0a01cc/ec-2525e4/c5-9d9828/c1-41ea5b/71-373190/7e-8a8833/33-ee5970/c9-e52d5d/6c-bc50ae/6f-42a791/44-98032f/f7-ead613/dd-36a280/49-018b1f/cc-7896ad/49-c0ed25/79-721bfb/88-3ecb66/b9-5015f3/1c-51c70b/c3-2342e2/83-4a7dcb/c2-1ecc00/89-2ddc3f/e4-2741db/2c-7bc52b/11-ba7050/18-ab34fe/7b-adaed0/ef-11b512/be-46b408/d2-e3193b/cd-3f98bf/12-9b9450/4b-a50c28/16-bbbba7/4c-e99d80/2e-97cc03/5e-0fae47/d2-043c65/ba-549345/31-8b97b4/d3-a58210/5f-cb833b/b2-8927f0/25-fd6f99/74-f57ce7/f2-3ed2df/73-21b5ce/f9-1ae5be/2b-ecb1ed/85-6759e0/c0-3bfff0/43-6b6215/82-d1924f/27-c3b33e/56-c42c6a?ver=2.0, line 5: TypeError: i is undefined
-JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/c4-f6736c/79-caa2e1/fd-475285/81-98d996/38-097622/75-bf67d6/9f-0da36b/55-e50491/51-caca9c/8b-c87139/4d-cfd487/86-136e0c/34-d6f81a/63-a7ed6b/8c-4144fa/7e-453e5d/93-5d32e4/3d-696aac/f1-ead36b/cb-ecd88b/54-11ea64/39-21e731/eb-d4a6ae/78-cafca3/a1-b5e7a7/35-ac2751/69-014b4f/85-c6428c/c9-4e1225/19-a3899b/c3-029418/2a-ed3773/8f-4b5c71/78-0a01cc/ec-2525e4/c5-9d9828/c1-41ea5b/71-373190/7e-8a8833/33-ee5970/c9-e52d5d/6c-bc50ae/6f-42a791/44-98032f/f7-ead613/dd-36a280/49-018b1f/cc-7896ad/49-c0ed25/79-721bfb/88-3ecb66/b9-5015f3/1c-51c70b/c3-2342e2/83-4a7dcb/c2-1ecc00/89-2ddc3f/e4-2741db/2c-7bc52b/11-ba7050/18-ab34fe/7b-adaed0/ef-11b512/be-46b408/d2-e3193b/cd-3f98bf/12-9b9450/4b-a50c28/16-bbbba7/4c-e99d80/2e-97cc03/5e-0fae47/d2-043c65/ba-549345/31-8b97b4/d3-a58210/5f-cb833b/b2-8927f0/25-fd6f99/74-f57ce7/f2-3ed2df/73-21b5ce/f9-1ae5be/2b-ecb1ed/85-6759e0/c0-3bfff0/43-6b6215/82-d1924f/27-c3b33e/56-c42c6a?ver=2.0, line 5: TypeError: i is undefined
-JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/c4-f6736c/79-caa2e1/fd-475285/81-98d996/38-097622/75-bf67d6/9f-0da36b/55-e50491/51-caca9c/8b-c87139/4d-cfd487/86-136e0c/34-d6f81a/63-a7ed6b/8c-4144fa/7e-453e5d/93-5d32e4/3d-696aac/f1-ead36b/cb-ecd88b/54-11ea64/39-21e731/eb-d4a6ae/78-cafca3/a1-b5e7a7/35-ac2751/69-014b4f/85-c6428c/c9-4e1225/19-a3899b/c3-029418/2a-ed3773/8f-4b5c71/78-0a01cc/ec-2525e4/c5-9d9828/c1-41ea5b/71-373190/7e-8a8833/33-ee5970/c9-e52d5d/6c-bc50ae/6f-42a791/44-98032f/f7-ead613/dd-36a280/49-018b1f/cc-7896ad/49-c0ed25/79-721bfb/88-3ecb66/b9-5015f3/1c-51c70b/c3-2342e2/83-4a7dcb/c2-1ecc00/89-2ddc3f/e4-2741db/2c-7bc52b/11-ba7050/18-ab34fe/7b-adaed0/ef-11b512/be-46b408/d2-e3193b/cd-3f98bf/12-9b9450/4b-a50c28/16-bbbba7/4c-e99d80/2e-97cc03/5e-0fae47/d2-043c65/ba-549345/31-8b97b4/d3-a58210/5f-cb833b/b2-8927f0/25-fd6f99/74-f57ce7/f2-3ed2df/73-21b5ce/f9-1ae5be/2b-ecb1ed/85-6759e0/c0-3bfff0/43-6b6215/82-d1924f/27-c3b33e/56-c42c6a?ver=2.0, line 5: TypeError: i is undefined
+    <system-err><![CDATA[JavaScript error: https://statics-xbc-eas.xbox.com/account/_scrf/js/themes=alt/84-10c390/d2-7effab/a0-e5dacb/62-3ce3c9/20-4a17fc/c4-bc6d01/69-4a4121/65-7a72d1/a0-3a124a/69-a23952/38-1c837d/73-6c488c/7e-91403f/19-e2f4d0/9c-67c286/dd-14c640/fb-12ff03/8e-b22e8a/31-fe2152/80-a401ba/da-147efc/aa-9e2436/34-d8037a/86-57e2ce/8b-4ba8bd/50-b8b42c/e0-2b14ef/a9-e3e1e9/26-a891fd/79-146bd7/47-eac4fe/bb-341970/82-c9381b/2c-0f9671/8f-34ff49/cd-48f2ef/41-db3bf9/ff-651338/95-1b397b/11-a45796/1f-cec017/9c-6ca1ac/80-f395dd/22-1264b1/9f-6e1b9a/b6-3474a2/c3-6cb390/40-4f6b5e/b0-d1cd44/b8-db4c41/94-97f661/d0-e929c9/ea-e4b570/4d-4c0d92/72-cdd2ed/12-896462/cf-382185/d6-8fcdd5/9c-fcef90/e9-10bf0b/4b-f64c23/2a-7959cb/7e-fa9ec3/a7-05d2ee/a9-48e1ea/75-3af323/84-a61d53/2a-a3dbc7/93-293485/d4-4a8dcb/a3-40a382/68-5f36e0/cd-522adc/f3-a111d6/d6-3d36b8/d1-6e8d13/a4-8b50ed/46-1180f6/58-6b2838/f8-6ac905/e9-c5afbd/a8-18be70/c4-f5d0de/1a-4e89b0/4a-1d414c/cc-4df553/dd-ec9411/eb-b6b45d/d4-8a29a0/af-4ca43e?ver=2.0, line 5: TypeError: this is undefined
+JavaScript error: https://account.xbox.com/en-us/social?xr=socialtwistnav, line 115: Error: Script error for "https://nexus.ensighten.com/xbox/Bootstrap.js"
+http://requirejs.org/docs/errors.html#scripterror
 ]]></system-err>
   </testcase>
-  <testcase name="openBoxAndCommentThenDelete" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="24.635"/>
-  <testcase name="pickRandomMixerStream" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0.515"/>
-  <testcase name="postALike" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="15.022"/>
-  <testcase name="postNewMessage" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="11.428"/>
-  <testcase name="removeSuggestions" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="12.239"/>
-  <testcase name="seeAllFilter" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="52.81"/>
-  <testcase name="seeAllMixerStream" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="9.787"/>
-  <testcase name="sharePosts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="45.079"/>
-  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
-    <skipped message="Element &lt;a href=&quot;/en-us/Profile?GamerTag=ChrissyBoi87&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3"/>
-    <system-out><![CDATA[This is the before step: 
-Checking list from the Friends & Club Side Bar: 
-Profile 1: xTwinkle Toesx
-Profile 2: Paul Doyle Veronica Gomes
-Profile 3: ChrissyBoi87 FastFuriousCruisers CEO/Host
-]]></system-out>
-  </testcase>
-  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0.565">
-    <failure message="Element &lt;a href=&quot;/en-us/Profile?GamerTag=KiwiCrashDummy&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-Element <a href="/en-us/Profile?GamerTag=KiwiCrashDummy"> could not be scrolled into view
+  <testcase name="sharePosts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="46.764">
+    <failure message="Element &lt;button id=&quot;getmore&quot; class=&quot;c-button x-hidden-focus&quot; name=&quot;getmore&quot;&gt; is not clickable at point (501.66668701171875,732.2833251953125) because another element &lt;div&gt; obscures it&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.38&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[org.openqa.selenium.ElementClickInterceptedException: 
+Element <button id="getmore" class="c-button x-hidden-focus" name="getmore"> is not clickable at point (501.66668701171875,732.2833251953125) because another element <div> obscures it
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:219)
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.sharePosts(MyXboxHomePageTest.java:97)
 ]]></failure>
     <system-out><![CDATA[This is the before step: 
+Found shared post on Feed: 1 by PopulousToast73
+/en-us/social/api/Comments?shareroot=userposts.xboxlive.com/users/xuid(2535407783985919)/posts/2535407783985919(0)_XboxLink.12e13091-db78-4f92-896a-e9fed6d65c48/timelines/User/2535407783985919&operation=Comments
+]]></system-out>
+  </testcase>
+  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="0">
+    <skipped message="The element reference of &lt;div class=&quot;friendListTitleText&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;&#10;System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.38&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435"/>
+    <system-out><![CDATA[This is the before step: 
 Checking list from the Friends & Club Side Bar: 
 Profile 1: xTwinkle Toesx
-Profile 2: KiwiCrashDummy
-Profile 3: ChrisWolvez www.twitch.tv/woivez
+Profile 2: SEANYT83 SEAN THORNTON
+Profile 3: UnicornBoss1
+Viewing Profile: xTwinkle Toesx
+Viewing Profile's URL: https://account.xbox.com/en-us/Profile?GamerTag=xTwinkle%20Toesx
+]]></system-out>
+    <system-err><![CDATA[Feb 14, 2018 4:25:03 PM org.openqa.selenium.remote.ErrorCodes toStatus
+INFO: HTTP Status: '400' -> incorrect JSON status mapping for 'stale element reference' (404 expected)
+]]></system-err>
+  </testcase>
+  <testcase name="viewAccounts" classname="xboxLiveTestFramework_Tests.MyXboxHomePageTest" time="9.662">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:249)
+</failure>
+    <system-out><![CDATA[This is the before step: 
+Checking list from the Friends & Club Side Bar: 
+Profile 1: xTwinkle Toesx
+Profile 2: P3rna longa89
+Profile 3: Sweet Lindir
+Viewing Profile: xTwinkle Toesx
+Viewing Profile's URL: https://account.xbox.com/en-us/Profile?GamerTag=xTwinkle%20Toesx
+The More Menu isn't open.
 ]]></system-out>
   </testcase>
 </testsuite>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-   <test name="FriendsandClubsSideBarTest">
+  <test name="Test">
+  	<test name="HomePageTest">
   	<groups>
   		<run>
-  			<include name="frinedsandclubs"/>
-  			<include name="filters"/>
+  			<include name="customizeprofile"/>
   		</run>
   	</groups>
+  
     <classes>
-    
+      <class name="xboxLiveTestFramework_Tests.MyXboxCustomizeProfileTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

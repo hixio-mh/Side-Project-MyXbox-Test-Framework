@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">19 methods, 2 failed,  3 skipped,  14 passed</span>
+                    <span class="method-stats">19 methods, 3 failed,  3 skipped,  13 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.MyXboxHomePageTest" hash-for-method="navigatingToFaceBook">navigatingToFaceBook</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.MyXboxHomePageTest" hash-for-method="sharePosts">sharePosts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -126,7 +131,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.MyXboxHomePageTest" hash-for-method="openBoxAndCommentThenDelete">openBoxAndCommentThenDelete</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.MyXboxHomePageTest" hash-for-method="sharePosts">sharePosts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -208,11 +213,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.MyXboxHomePageTest" hash-for-method="seeAllMixerStream">seeAllMixerStream</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All-Tests" title="xboxLiveTestFramework_Tests.MyXboxHomePageTest" hash-for-method="sharePosts">sharePosts</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-All-Tests -->
                   </li>
                 </ul>
@@ -236,12 +236,23 @@
                   <a name="navigatingToFaceBook">
                   </a> <!-- navigatingToFaceBook -->
                   <span class="method-name">navigatingToFaceBook</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;a href=&quot;/en-us/friends/facebookfriends&quot;&gt; could not be scrolled into view
+                  <div class="stack-trace">java.lang.AssertionError: expected [You can now connect with your Facebook friends on Xbox Live. Click below to get started.] but found []
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:274)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sharePosts">
+                  </a> <!-- sharePosts -->
+                  <span class="method-name">sharePosts</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button id=&quot;getmore&quot; class=&quot;c-button x-hidden-focus&quot; name=&quot;getmore&quot;&gt; is not clickable at point (501.66668701171875,732.2833251953125) because another element &lt;div&gt; obscures it
 Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
-System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.38&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -250,9 +261,12 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at xboxLivePageObjects_Lib.FriendsandClubsComponent.findFaceBookFriends(FriendsandClubsComponent.java:319)
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:237)
-... Removed 33 stack frames
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at xboxLivePageObjects_Lib.ActivityFeedComponent.expandPostedActivityFeed(ActivityFeedComponent.java:197)
+	at xboxLivePageObjects_Lib.ActivityFeedComponent.originalPostShared(ActivityFeedComponent.java:508)
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.sharePosts(MyXboxHomePageTest.java:97)
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -261,23 +275,9 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
                   <a name="viewAccounts">
                   </a> <!-- viewAccounts -->
                   <span class="method-name">viewAccounts</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;a href=&quot;/en-us/Profile?GamerTag=KiwiCrashDummy&quot;&gt; could not be scrolled into view
-Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
-System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at xboxLivePageObjects_Lib.FriendsandClubsComponent.viewAccount(FriendsandClubsComponent.java:175)
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:219)
-... Removed 33 stack frames
+                  <div class="stack-trace">java.lang.NullPointerException
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:249)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -294,12 +294,23 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
                   <a name="navigatingToFaceBook">
                   </a> <!-- navigatingToFaceBook -->
                   <span class="method-name">navigatingToFaceBook</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;a href=&quot;/en-us/friends/facebookfriends&quot;&gt; could not be scrolled into view
+                  <div class="stack-trace">java.lang.AssertionError: expected [You can now connect with your Facebook friends on Xbox Live. Click below to get started.] but found []
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:274)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sharePosts">
+                  </a> <!-- sharePosts -->
+                  <span class="method-name">sharePosts</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button id=&quot;getmore&quot; class=&quot;c-button x-hidden-focus&quot; name=&quot;getmore&quot;&gt; is not clickable at point (501.66668701171875,732.2833251953125) because another element &lt;div&gt; obscures it
 Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
-System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.38&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -308,40 +319,12 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at xboxLivePageObjects_Lib.FriendsandClubsComponent.findFaceBookFriends(FriendsandClubsComponent.java:319)
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:237)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="openBoxAndCommentThenDelete">
-                  </a> <!-- openBoxAndCommentThenDelete -->
-                  <span class="method-name">openBoxAndCommentThenDelete</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: .comment
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
-System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
-*** Element info: {Using=class name, value=comment}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:179)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByClassName(RemoteWebElement.java:239)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:175)
-	at xboxLivePageObjects_Lib.ActivityFeedComponent.veiwNewCommentDialogBox(ActivityFeedComponent.java:304)
-	at xboxLivePageObjects_Lib.ActivityFeedComponent.deleteRecentComment(ActivityFeedComponent.java:354)
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.openBoxAndCommentThenDelete(MyXboxHomePageTest.java:81)
-... Removed 33 stack frames
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at xboxLivePageObjects_Lib.ActivityFeedComponent.expandPostedActivityFeed(ActivityFeedComponent.java:197)
+	at xboxLivePageObjects_Lib.ActivityFeedComponent.originalPostShared(ActivityFeedComponent.java:508)
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.sharePosts(MyXboxHomePageTest.java:97)
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -350,12 +333,13 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
                   <a name="viewAccounts">
                   </a> <!-- viewAccounts -->
                   <span class="method-name">viewAccounts</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;a href=&quot;/en-us/Profile?GamerTag=ChrissyBoi87&quot;&gt; could not be scrolled into view
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;div class=&quot;friendListTitleText&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
-System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+System info: host: &apos;LAPTOP-L1BFDSGL&apos;, ip: &apos;10.0.0.38&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -363,9 +347,11 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at xboxLivePageObjects_Lib.FriendsandClubsComponent.viewAccount(FriendsandClubsComponent.java:175)
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:219)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:160)
+	at xboxLivePageObjects_Lib.FriendsandClubsComponent.createSortFriendList(FriendsandClubsComponent.java:114)
+	at xboxLivePageObjects_Lib.FriendsandClubsComponent.&lt;init&gt;(FriendsandClubsComponent.java:90)
+	at xboxLivePageObjects_Lib.FriendsandClubsComponent.viewAccount(FriendsandClubsComponent.java:184)
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:215)
 ... Removed 33 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -469,13 +455,6 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
                   <span class="method-name">seeAllMixerStream</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sharePosts">
-                  </a> <!-- sharePosts -->
-                  <span class="method-name">sharePosts</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-All-Tests-class-passed -->
         </div> <!-- panel All-Tests -->
@@ -505,13 +484,14 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
     &lt;classes&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.BaseTest&quot;/&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.FriendsAndClubsSideBarTest&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.MyXboxCustomizeProfileTest&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.MyXboxHeaderTest&quot;/&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.MyXboxHomePageTest&quot;/&gt;
-      &lt;class name=&quot;xboxLiveTestFramework_Tests.MyXboxProfilePage&quot;/&gt;
+      &lt;class name=&quot;xboxLiveTestFramework_Tests.MyXboxProfilePageTest&quot;/&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.RegressionTest&quot;/&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.RetryAnalyzer&quot;/&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.SignInProfileTest&quot;/&gt;
       &lt;class name=&quot;xboxLiveTestFramework_Tests.TestMethodListener&quot;/&gt;
-      &lt;class name=&quot;xboxLiveTestFramework_Tests.UnitContentTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Tests --&gt;
 &lt;/suite&gt; &lt;!-- All-Tests --&gt;
@@ -525,7 +505,7 @@ Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Tests (9 classes)</span>
+                <span class="test-name">Tests (10 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -735,84 +715,84 @@ data.addRows(19);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'generalFilters')
 data.setCell(0, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(0, 3, 56356);
+data.setCell(0, 3, 66417);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'seeAllFilter')
 data.setCell(1, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(1, 3, 52809);
+data.setCell(1, 3, 55054);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'sharePosts')
 data.setCell(2, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(2, 3, 45080);
+data.setCell(2, 3, 48363);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkPostedLinks')
+data.setCell(3, 1, 'sharePosts')
 data.setCell(3, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(3, 3, 29722);
+data.setCell(3, 3, 46763);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'openBoxAndCommentThenDelete')
 data.setCell(4, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(4, 3, 24636);
+data.setCell(4, 3, 45744);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'openBoxAndCommentThenDelete')
+data.setCell(5, 1, 'checkPostedLinks')
 data.setCell(5, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(5, 3, 23667);
+data.setCell(5, 3, 36639);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'findByText')
+data.setCell(6, 1, 'openBoxAndComment')
 data.setCell(6, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(6, 3, 17205);
+data.setCell(6, 3, 21982);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'postALike')
 data.setCell(7, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(7, 3, 15023);
+data.setCell(7, 3, 21072);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'removeSuggestions')
+data.setCell(8, 1, 'deletePost')
 data.setCell(8, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(8, 3, 12239);
+data.setCell(8, 3, 17044);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'postNewMessage')
+data.setCell(9, 1, 'findByText')
 data.setCell(9, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(9, 3, 11428);
+data.setCell(9, 3, 15991);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'openBoxAndComment')
+data.setCell(10, 1, 'postNewMessage')
 data.setCell(10, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(10, 3, 11339);
+data.setCell(10, 3, 11417);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'deletePost')
+data.setCell(11, 1, 'viewAccounts')
 data.setCell(11, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(11, 3, 11295);
+data.setCell(11, 3, 9662);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'seeAllMixerStream')
+data.setCell(12, 1, 'navigatingToFaceBook')
 data.setCell(12, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(12, 3, 9786);
+data.setCell(12, 3, 9111);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'expandList')
+data.setCell(13, 1, 'removeSuggestions')
 data.setCell(13, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(13, 3, 5477);
+data.setCell(13, 3, 8904);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'navigatingToFaceBook')
 data.setCell(14, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(14, 3, 4537);
+data.setCell(14, 3, 8374);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'navigatingToFaceBook')
+data.setCell(15, 1, 'viewAccounts')
 data.setCell(15, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(15, 3, 4470);
+data.setCell(15, 3, 5864);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'viewAccounts')
+data.setCell(16, 1, 'expandList')
 data.setCell(16, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(16, 3, 565);
+data.setCell(16, 3, 5389);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'pickRandomMixerStream')
+data.setCell(17, 1, 'seeAllMixerStream')
 data.setCell(17, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(17, 3, 515);
+data.setCell(17, 3, 376);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'viewAccounts')
+data.setCell(18, 1, 'pickRandomMixerStream')
 data.setCell(18, 2, 'xboxLiveTestFramework_Tests.MyXboxHomePageTest')
-data.setCell(18, 3, 499);
+data.setCell(18, 3, 103);
 window.suiteTableData['All-Tests']= { tableData: data, tableDiv: 'times-div-All-Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-All-Tests">
               </div> <!-- times-div-All-Tests -->
             </div> <!-- times-div -->
@@ -827,32 +807,30 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All-Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">24 ignored methods</span>
+            <span class="header-content">41 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">xboxLiveTestFramework_Tests.SignInProfileTest</span>
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.MyXboxHeaderTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">signUpMainToXboxHome</span>
+                <span class="ignored-method-name">headerArrorwTab</span>
                 <br/>
-                <span class="ignored-method-name">signUpMainToXboxMessages</span>
-                <br/>
-                <span class="ignored-method-name">signUpMainToXboxMyGames</span>
-                <br/>
-                <span class="ignored-method-name">signUpMainToXboxAchievements</span>
-                <br/>
-                <span class="ignored-method-name">signUpFromMainToProfile</span>
-                <br/>
-                <span class="ignored-method-name">signUpMainToXboxFriends</span>
-                <br/>
-                <span class="ignored-method-name">signUpMainToXboxTrendOnLive</span>
+                <span class="ignored-method-name">startFromHomePage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">xboxLiveTestFramework_Tests.MyXboxProfilePage</span>
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.MyXboxCustomizeProfileTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">f</span>
+                <span class="ignored-method-name">updateProfilePic</span>
+                <br/>
+                <span class="ignored-method-name">clickEditGamerTagLink</span>
+                <br/>
+                <span class="ignored-method-name">goToCustomizePage</span>
+                <br/>
+                <span class="ignored-method-name">editBioAndLocationInfo</span>
+                <br/>
+                <span class="ignored-method-name">clickAvatarLink</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -874,6 +852,43 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.MyXboxProfilePageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deletePost</span>
+                <br/>
+                <span class="ignored-method-name">gameListFilter</span>
+                <br/>
+                <span class="ignored-method-name">sharePosts</span>
+                <br/>
+                <span class="ignored-method-name">cannotPostOnOhterTabs</span>
+                <br/>
+                <span class="ignored-method-name">goingThroughTheTabs</span>
+                <br/>
+                <span class="ignored-method-name">achievementContent</span>
+                <br/>
+                <span class="ignored-method-name">removeSuggestions</span>
+                <br/>
+                <span class="ignored-method-name">profileCardContentCheck</span>
+                <br/>
+                <span class="ignored-method-name">gameListLink</span>
+                <br/>
+                <span class="ignored-method-name">comparePlayers</span>
+                <br/>
+                <span class="ignored-method-name">openBoxAndComment</span>
+                <br/>
+                <span class="ignored-method-name">expandList</span>
+                <br/>
+                <span class="ignored-method-name">postALike</span>
+                <br/>
+                <span class="ignored-method-name">openBoxAndCommentThenDelete</span>
+                <br/>
+                <span class="ignored-method-name">navigatingToFaceBook</span>
+                <br/>
+                <span class="ignored-method-name">postNewMessage</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">xboxLiveTestFramework_Tests.RegressionTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">regression</span>
@@ -881,25 +896,29 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">xboxLiveTestFramework_Tests.UnitContentTest</span>
+              <span class="ignored-class-name">xboxLiveTestFramework_Tests.SignInProfileTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">checkMainProfile</span>
+                <span class="ignored-method-name">signInIncorrectPW</span>
                 <br/>
-                <span class="ignored-method-name">checkSignInComponent</span>
+                <span class="ignored-method-name">signUpMainToXboxHome</span>
                 <br/>
-                <span class="ignored-method-name">checkMainHome</span>
+                <span class="ignored-method-name">signUpMainToXboxMessages</span>
                 <br/>
-                <span class="ignored-method-name">checkMainMessages</span>
+                <span class="ignored-method-name">signUpMainToXboxMyGames</span>
                 <br/>
-                <span class="ignored-method-name">checkMainAchievements</span>
+                <span class="ignored-method-name">signUpMainToXboxAchievements</span>
                 <br/>
-                <span class="ignored-method-name">checkMainClubs</span>
+                <span class="ignored-method-name">mainPageContentCheck</span>
                 <br/>
-                <span class="ignored-method-name">checkMainFriends</span>
+                <span class="ignored-method-name">signInIncorrectEmail</span>
                 <br/>
-                <span class="ignored-method-name">checkMainTrending</span>
+                <span class="ignored-method-name">signUpFromMainToProfile</span>
                 <br/>
-                <span class="ignored-method-name">checkMainMyGame</span>
+                <span class="ignored-method-name">signUpMainToXboxFriends</span>
+                <br/>
+                <span class="ignored-method-name">contentSignInPage</span>
+                <br/>
+                <span class="ignored-method-name">signUpMainToXboxTrendOnLive</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -918,251 +937,253 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpAccount</span>
-                <span class="method-start">5900 ms</span>
+                <span class="method-start">6532 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">pause</span>
-                <span class="method-start">38868 ms</span>
+                <span class="method-start">57135 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">40876 ms</span>
+                <span class="method-start">59142 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkPostedLinks</span>
-                <span class="method-start">40969 ms</span>
+                <span class="method-start">63215 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">70691 ms</span>
+                <span class="method-start">99856 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">73424 ms</span>
+                <span class="method-start">104934 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deletePost</span>
-                <span class="method-start">74266 ms</span>
+                <span class="method-start">109275 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">85561 ms</span>
+                <span class="method-start">126320 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">87656 ms</span>
+                <span class="method-start">131188 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">expandList</span>
-                <span class="method-start">88473 ms</span>
+                <span class="method-start">135367 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">93950 ms</span>
+                <span class="method-start">140757 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">96523 ms</span>
+                <span class="method-start">145257 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">findByText</span>
-                <span class="method-start">97146 ms</span>
+                <span class="method-start">149547 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">114353 ms</span>
+                <span class="method-start">165538 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">116983 ms</span>
+                <span class="method-start">169923 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">generalFilters</span>
-                <span class="method-start">117561 ms</span>
+                <span class="method-start">173993 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">173918 ms</span>
+                <span class="method-start">240410 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">175736 ms</span>
+                <span class="method-start">244428 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">navigatingToFaceBook</span>
-                <span class="method-start">176688 ms</span>
+                <span class="method-start">248512 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">181159 ms</span>
+                <span class="method-start">257624 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">183936 ms</span>
+                <span class="method-start">261767 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">navigatingToFaceBook</span>
-                <span class="method-start">188411 ms</span>
+                <span class="method-start">265848 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">192954 ms</span>
+                <span class="method-start">274237 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">195610 ms</span>
+                <span class="method-start">277653 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openBoxAndComment</span>
-                <span class="method-start">196269 ms</span>
+                <span class="method-start">281729 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">207608 ms</span>
+                <span class="method-start">303712 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">213905 ms</span>
+                <span class="method-start">307090 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openBoxAndCommentThenDelete</span>
-                <span class="method-start">214660 ms</span>
+                <span class="method-start">311139 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">238327 ms</span>
+                <span class="method-start">356883 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">240303 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">openBoxAndCommentThenDelete</span>
-                <span class="method-start">241083 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">startPoint</span>
-                <span class="method-start">265719 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">268761 ms</span>
+                <span class="method-start">363521 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">pickRandomMixerStream</span>
-                <span class="method-start">269879 ms</span>
+                <span class="method-start">367611 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">270394 ms</span>
+                <span class="method-start">367715 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">272807 ms</span>
+                <span class="method-start">371639 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">postALike</span>
-                <span class="method-start">273870 ms</span>
+                <span class="method-start">375712 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">288893 ms</span>
+                <span class="method-start">396784 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">291311 ms</span>
+                <span class="method-start">400371 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">postNewMessage</span>
-                <span class="method-start">292071 ms</span>
+                <span class="method-start">404449 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">303499 ms</span>
+                <span class="method-start">415866 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">307343 ms</span>
+                <span class="method-start">419394 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">removeSuggestions</span>
-                <span class="method-start">307697 ms</span>
+                <span class="method-start">423599 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">319936 ms</span>
+                <span class="method-start">432503 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">325061 ms</span>
+                <span class="method-start">436160 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">seeAllFilter</span>
-                <span class="method-start">357202 ms</span>
+                <span class="method-start">440230 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">410012 ms</span>
+                <span class="method-start">495284 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">413395 ms</span>
+                <span class="method-start">501547 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">seeAllMixerStream</span>
-                <span class="method-start">414059 ms</span>
+                <span class="method-start">505619 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">423846 ms</span>
+                <span class="method-start">505997 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">429076 ms</span>
+                <span class="method-start">513528 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">sharePosts</span>
-                <span class="method-start">429325 ms</span>
+                <span class="method-start">517640 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">474405 ms</span>
+                <span class="method-start">566005 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">479796 ms</span>
+                <span class="method-start">569982 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">sharePosts</span>
+                <span class="method-start">574037 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">startPoint</span>
+                <span class="method-start">620801 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">624607 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">viewAccounts</span>
-                <span class="method-start">480062 ms</span>
+                <span class="method-start">628690 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">480561 ms</span>
+                <span class="method-start">634554 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">483589 ms</span>
+                <span class="method-start">638494 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">viewAccounts</span>
-                <span class="method-start">483886 ms</span>
+                <span class="method-start">642541 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">startPoint</span>
-                <span class="method-start">484451 ms</span>
+                <span class="method-start">652203 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">489311 ms</span>
+                <span class="method-start">656626 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">489327 ms</span>
+                <span class="method-start">656656 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

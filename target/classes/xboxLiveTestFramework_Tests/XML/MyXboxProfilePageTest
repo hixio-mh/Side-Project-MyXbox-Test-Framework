@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-  <test name="Test">
+  <test name="ProfilePageTest">
+  	<groups>
+  		<run>
+  			<include name="profilepage"/>
+  			<include name="post"/>
+  			<include name="like"/>
+  			<include name="friendsandclub"/>
+  			<include name="profiletabs"/>
+  			<include name="achievements"/>
+  		</run>
+  	</groups>
+  
     <classes>
-      <class name="xboxLiveTestFramework_Tests.MyXboxProfilePage"/>
+      <class name="xboxLiveTestFramework_Tests.MyXboxProfilePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

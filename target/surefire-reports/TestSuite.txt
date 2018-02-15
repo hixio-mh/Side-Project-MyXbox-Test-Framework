@@ -1,24 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 531.921 s <<< FAILURE! - in TestSuite
-navigatingToFaceBook(xboxLiveTestFramework_Tests.MyXboxHomePageTest)  Time elapsed: 4.543 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-Element <a href="/en-us/friends/facebookfriends"> could not be scrolled into view
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:237)
+Tests run: 19, Failures: 3, Errors: 0, Skipped: 3, Time elapsed: 659.111 s <<< FAILURE! - in TestSuite
+navigatingToFaceBook(xboxLiveTestFramework_Tests.MyXboxHomePageTest)  Time elapsed: 8.39 s  <<< FAILURE!
+java.lang.AssertionError: expected [You can now connect with your Facebook friends on Xbox Live. Click below to get started.] but found []
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.navigatingToFaceBook(MyXboxHomePageTest.java:274)
 
-viewAccounts(xboxLiveTestFramework_Tests.MyXboxHomePageTest)  Time elapsed: 0.565 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-Element <a href="/en-us/Profile?GamerTag=KiwiCrashDummy"> could not be scrolled into view
+sharePosts(xboxLiveTestFramework_Tests.MyXboxHomePageTest)  Time elapsed: 46.764 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+Element <button id="getmore" class="c-button x-hidden-focus" name="getmore"> is not clickable at point (501.66668701171875,732.2833251953125) because another element <div> obscures it
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'LAPTOP-L1BFDSGL', ip: '10.0.0.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14900, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e52936bd-72da-4b95-b87d-6ccf72e059a3
-	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:219)
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 58.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17664, moz:profile: C:\Users\Rigat\AppData\Loca..., moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 38fc95ac-ec55-4e06-a7a4-ad390cc23435
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.sharePosts(MyXboxHomePageTest.java:97)
+
+viewAccounts(xboxLiveTestFramework_Tests.MyXboxHomePageTest)  Time elapsed: 9.662 s  <<< FAILURE!
+java.lang.NullPointerException
+	at xboxLiveTestFramework_Tests.MyXboxHomePageTest.viewAccounts(MyXboxHomePageTest.java:249)
 
