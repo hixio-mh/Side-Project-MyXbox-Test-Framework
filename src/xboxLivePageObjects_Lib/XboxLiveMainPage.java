@@ -1,6 +1,5 @@
 package xboxLivePageObjects_Lib;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -33,7 +32,7 @@ public class XboxLiveMainPage extends PageObject{
 	@FindBy(id="shellmenu_93")
 	private WebElement myXboxTrendingOnXboxLive;
 	
-	public XboxLiveMainPage(WebDriver driver) {
+	public XboxLiveMainPage(Driver driver) {
 		super(driver);
 	}
 	

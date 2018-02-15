@@ -2,7 +2,6 @@ package xboxLivePageObjects_Lib;
 
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -17,7 +16,7 @@ public class SignInConfirmationComponent extends PageObject {
 	@FindBy(id="msame_si1")
 	private WebElement signOut;
 	
-	public SignInConfirmationComponent(WebDriver driver) {
+	public SignInConfirmationComponent(Driver driver) {
 		super(driver);
 	}
 	

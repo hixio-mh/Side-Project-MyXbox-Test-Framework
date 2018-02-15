@@ -3,13 +3,12 @@ package xboxLivePageObjects_Lib;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MyXboxOtherProfilePage extends PageObject {
 	
-	//Unable to test this file due to <a> tags unable to open up on the Friends and Clubs side bar(FriendsandClubsComponent.java)
+	//Program in progress
 	
 	@FindBy(id="primaryArea")
 	public WebElement entireProfileWebPage;
@@ -34,7 +33,9 @@ public class MyXboxOtherProfilePage extends PageObject {
 	@FindBy(id="message")
 	public WebElement messageButton;
 	
-	public WebElement moreButton = xboxProfileCardInfo.findElement(By.className("c-action-trigger"));
+	public WebElement moreButtonSection = xboxProfileCardInfo.findElement(By.className("c-action-menu"));
+	
+	public WebElement moreButton = moreButtonSection.findElement(By.className("c-action-trigger"));
 	@FindBy(id="report")
 	public WebElement reportButton;
 	@FindBy(id="blockuseractionbutton")
@@ -44,7 +45,7 @@ public class MyXboxOtherProfilePage extends PageObject {
 	public WebElement friendsAndFollowersStats;
 	
 	
-	public MyXboxOtherProfilePage (WebDriver driver) {
+	public MyXboxOtherProfilePage (Driver driver) {
 		super(driver);
 	}
 	
@@ -80,9 +81,9 @@ public class MyXboxOtherProfilePage extends PageObject {
 	}
 	
 	public void openMoreMenu() {
-		if (moreButton.getAttribute("id aria-expanded").equals("false")) {
+		if (moreButton.getAttribute("aria-expanded").equals("false")) {
 			moreButton.click();
-			moreButton = xboxProfileCardInfo.findElement(By.cssSelector(".c-action-trigger.f-active"));
+			moreButton = moreButtonSection.findElement(By.cssSelector(".c-action-trigger.f-active"));
 		}
 		else {
 			System.out.println("The More Menu is already open");
@@ -90,9 +91,9 @@ public class MyXboxOtherProfilePage extends PageObject {
 	}
 	
 	public void closeMoreMenu() {
-		if (moreButton.getAttribute("id aria-expanded").equals("true")) {
+		if (moreButton.getAttribute("aria-expanded").equals("true")) {
 			moreButton.click();
-			moreButton = xboxProfileCardInfo.findElement(By.cssSelector(".c-action-trigger.x-hidden-focus"));
+			moreButton = moreButtonSection.findElement(By.cssSelector(".c-action-trigger.x-hidden-focus"));
 		}
 		else {
 			System.out.println("The More Menu isn't open.");

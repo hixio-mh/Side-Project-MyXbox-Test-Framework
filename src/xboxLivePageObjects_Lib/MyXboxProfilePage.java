@@ -4,7 +4,6 @@ import java.util.List;
 
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -57,7 +56,7 @@ public class MyXboxProfilePage extends PageObject {
 	@FindBy(id="mainTab4")
 	public WebElement capturesSection;
 	
-	public MyXboxProfilePage (WebDriver driver) {
+	public MyXboxProfilePage (Driver driver) {
 		super(driver);
 		
 	}

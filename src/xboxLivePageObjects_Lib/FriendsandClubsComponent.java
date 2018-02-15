@@ -6,7 +6,6 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -85,7 +84,7 @@ public class FriendsandClubsComponent extends PageObject {
 	public WebElement findFacebookFriends;
 	
 	
-	public FriendsandClubsComponent (WebDriver driver) {
+	public FriendsandClubsComponent (Driver driver) {
 		super(driver);
 		gatherEntireList = entireList.findElements(By.className("friendList"));
 		createSortFriendList();
@@ -170,7 +169,8 @@ public class FriendsandClubsComponent extends PageObject {
 			if(counterWEList == randNum) {
 				recentlyViewed = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
 				recentlyViewedURL = e.findElement(By.tagName("a")).getAttribute("href");
-				act.moveToElement(e.findElement(By.tagName("a"))).click().perform();;
+				Driver.js.executeScript("arguments[0].click();", e.findElement(By.tagName("a")));
+				//act.moveToElement(e.findElement(By.tagName("a"))).click().perform();
 				synchronized (driver) {
 						 try {driver.wait(4000);} 
 						 catch (InterruptedException wait) { wait.printStackTrace();}
@@ -321,7 +321,8 @@ public class FriendsandClubsComponent extends PageObject {
 	
 	public void findFaceBookFriends() {
 		findFacebookFriends = entireList.findElement(By.partialLinkText("Find facebook friends"));
-		findFacebookFriends.click();
+		Driver.js.executeScript("arguments[0].click();", findFacebookFriends);
+		//findFacebookFriends.click();
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,20 +12,23 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver implements WebDriver {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	String browserName;
+	public static JavascriptExecutor js;
 	
 	public Driver (String browserName) {
 		this.browserName = browserName;
 		if(browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "./resources/webdrivers/chromedriver_win32/chromedriver.exe");
 			this.driver = new ChromeDriver();
+			js = (JavascriptExecutor) this.driver;
 		}
 		
 		
 		if(browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "./resources/webdrivers/geckodriver.exe");
 			this.driver = new FirefoxDriver();
+			js = (JavascriptExecutor) this.driver;
 		}
 		// TODO add the rest of the browser
 		

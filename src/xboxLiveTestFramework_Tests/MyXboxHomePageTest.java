@@ -7,6 +7,8 @@ import xboxLivePageObjects_Lib.*;
 
 import static org.testng.Assert.*;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.*;
@@ -122,7 +124,7 @@ public class MyXboxHomePageTest extends BaseTest {
 	  }
 	  
 	  //Broken Test Due <a> tags not functioning
-	  //@Test(groups= {"homepage"})
+	  @Test(groups= {"homepage"})
 	  public void checkPostedLinks() {
 		  ActivityFeedComponent homeActivityFeed = new ActivityFeedComponent(driver);
 		  
@@ -207,7 +209,7 @@ public class MyXboxHomePageTest extends BaseTest {
 		  
 	  }
 	  //Broken test due to <a> links no longer functional
-	  //@Test(groups= {"friendsandclubs", "view", "homepage"})
+	  @Test(groups= {"friendsandclubs", "view", "homepage"})
 	  public void viewAccounts() {
 		  FriendsandClubsComponent friendsAndClubsSideBar = new FriendsandClubsComponent(driver);
 		  
@@ -220,7 +222,7 @@ public class MyXboxHomePageTest extends BaseTest {
 		  
 		  MyXboxOtherProfilePage otherProfile = new MyXboxOtherProfilePage(driver);
 		  
-		  assertEquals(otherProfile.getProfileName(), FriendsandClubsComponent.recentlyViewed);
+		  assertTrue(otherProfile.profileName.contains(FriendsandClubsComponent.recentlyViewed));
 		  
 		  assertTrue(otherProfile.otherProfileURL.contains(FriendsandClubsComponent.recentlyViewedURL));
 		  
@@ -234,11 +236,11 @@ public class MyXboxHomePageTest extends BaseTest {
 		  
 		  otherProfile.closeMoreMenu();
 		  
-		  assertTrue(otherProfile.moreButton.getAttribute("id aria-expanded").equals("false"));
+		  assertTrue(otherProfile.moreButton.getAttribute("aria-expanded").equals("false"));
 		  
 		  otherProfile.openMoreMenu();
 		  
-		  assertTrue(otherProfile.moreButton.getAttribute("id aria-expanded").equals("true"));
+		  assertTrue(otherProfile.moreButton.getAttribute("aria-expanded").equals("true"));
 		  
 		  assertTrue(otherProfile.reportButton.isDisplayed());
 		  
@@ -267,6 +269,7 @@ public class MyXboxHomePageTest extends BaseTest {
 		  
 		  friendsAndClubsSideBar.findFaceBookFriends();
 		  assertEquals(driver.getCurrentUrl(),"https://account.xbox.com/en-us/friends/facebookfriends");
+		  driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 		  assertEquals(driver.findElement(By.className("landingHeader")).getText(), "You can now connect with your "
 		  		+ "Facebook friends on Xbox Live. Click below to get started.");
 		  assertEquals(driver.findElement(By.id("startFriendFinder")).getText(), "Find Friends");

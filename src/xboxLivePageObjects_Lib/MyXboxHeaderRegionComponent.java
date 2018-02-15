@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -53,7 +52,7 @@ public class MyXboxHeaderRegionComponent extends PageObject {
 	public Map<String, WebElement> myXboxHeaderRegionBar = new HashMap<String, WebElement>();
 	
 	
-	public MyXboxHeaderRegionComponent (WebDriver driver) {
+	public MyXboxHeaderRegionComponent (Driver driver) {
 		super(driver);
 		myXboxHeaderRegionBar.put("logo", xboxLogo);
 		myXboxHeaderRegionBar.put("home", home);

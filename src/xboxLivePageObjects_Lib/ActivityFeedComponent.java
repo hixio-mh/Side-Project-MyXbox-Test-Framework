@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -80,7 +79,7 @@ public class ActivityFeedComponent extends PageObject {
 		
 		
 	
-	public ActivityFeedComponent (WebDriver driver) {
+	public ActivityFeedComponent (Driver driver) {
 		super(driver);
 		randomGibberish = randomSetup();
 		postedActivityFeed = activityFeedWholeContent.findElements(By.className("xboxactivityfeeditem"));
@@ -97,7 +96,7 @@ public class ActivityFeedComponent extends PageObject {
 	
 	
 	public String randomSetup() {
-		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()abcdefghijklmnopqrstuvwxyz";
+		String catalog = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&()abcdefghijklmnopqrstuvwxyz.,;:.,";
 		String newText = "";
 		Random rand = new Random();
 		while (newText.length() < 10) {
@@ -139,7 +138,7 @@ public class ActivityFeedComponent extends PageObject {
 					attempts++;
 				}
 						
-				System.out.println(listCounter + ": " + retrievedText);
+				System.out.println((listCounter+1) + ": " + retrievedText);
 				if(retrievedText.trim().equals(recentGibberish)) {
 					found = true;
 					System.out.println("New message has been found");
@@ -160,11 +159,15 @@ public class ActivityFeedComponent extends PageObject {
 		for (WebElement e : postedActivityFeed) {
 			if (listCounter == randNum) {
 				recentlyViewedPost = e.getAttribute("data-shareroot");
-				e.findElement(By.id("deleteactionlink")).click();
-				declareDialogBoxElements();
-				deleteButton.click();
-				
-				break;
+				try {
+					e.findElement(By.id("deleteactionlink")).click();
+					declareDialogBoxElements();
+					deleteButton.click();
+					break;
+				} catch(NoSuchElementException r) {
+					randNum = rand.nextInt(postedActivityFeed.size()/2);
+					continue;
+				}
 			}
 			listCounter++;
 		}
@@ -245,7 +248,7 @@ public class ActivityFeedComponent extends PageObject {
 			try {
 				deleteButton = viewSpecificFeedPostOptions.findElement(By.id("deleteactionlink"));
 			} catch (NoSuchElementException moveAlong) {  }
-			//Broken code due to <a> links not functioning
+
 			try {
 				postedHyperLink = viewSpecificImagePost.findElement(By.tagName("xbox-action-link"))
 						.findElement(By.tagName("a"));
@@ -379,11 +382,11 @@ public class ActivityFeedComponent extends PageObject {
 				recentlyViewedPost = e.getAttribute("data-shareroot");
 				e.findElement(By.id("likeactionlink")).click();
 				declareDialogBoxElements();
-				if(likeButton.getAttribute("class").equals("ajaxbutton c-action-trigger c-glyph glyph-heart-fill profilecolor")) {
+				if(likeButton.getAttribute("class").equals("ajaxbutton profilecolor c-action-trigger c-glyph glyph-heart-fill")) {
 					likeButton.click();
-					while(!(likeButton.getAttribute("class").equals("ajaxbutton c-action-trigger c-glyph glyph-heart-fill x-hidden-focus"))){
+					while(!(likeButton.getAttribute("class").equals("ajaxbutton  c-action-trigger c-glyph glyph-heart-fill"))){
 						synchronized (driver) {
-							try {driver.wait(4000);} 
+							try {driver.wait(5000);} 
 							catch (InterruptedException r) { r.printStackTrace();}
 						}
 					}
@@ -490,7 +493,7 @@ public class ActivityFeedComponent extends PageObject {
 					try {driver.wait(2000);} 
 					catch (InterruptedException r) { r.printStackTrace();}
 				}
-				viewShares.click();
+				Driver.js.executeScript("arguments[0].click();", viewShares);
 				socialDialogList = socialContentDialogList.findElements(By.tagName("li"));
 				for(WebElement r : socialDialogList) {
 					if(r.findElement(By.className("name")).getText().equals(profileName)) {
@@ -501,7 +504,7 @@ public class ActivityFeedComponent extends PageObject {
 				}
 			}
 		}
-		if(foundOriginal == false ) {
+		while(foundOriginal == false ) {
 			expandPostedActivityFeed();
 			Outer2:
 			for (WebElement e : postedActivityFeed) {
@@ -514,12 +517,17 @@ public class ActivityFeedComponent extends PageObject {
 					}
 					declareDialogBoxElements();
 					socialDropDownMenu.click();
-					viewShares.click();
+					Driver.js.executeScript("arguments[0].click();", viewShares);
 					socialDialogList = socialContentDialogList.findElements(By.tagName("li"));
 					for(WebElement r : socialDialogList) {
 						if(r.findElement(By.className("name")).getText().equals(profileName)) {
 							System.out.println("Found the original post shared by: " + profileName);
 							foundOriginal = true;
+							closeFeedPost.click();
+							break Outer2;
+						}
+						else {
+							closeFeedPost.click();
 							break Outer2;
 						}
 					}
@@ -529,7 +537,7 @@ public class ActivityFeedComponent extends PageObject {
 		
 		return foundOriginal;
 	}
-	//broken code due to <a> links non-functional
+	
 	public boolean hyperLinkDestination() {
 		boolean uRLMatch = false;
 		for (WebElement e: postedActivityFeed) {
@@ -541,13 +549,11 @@ public class ActivityFeedComponent extends PageObject {
 					e.click();
 					declareDialogBoxElements();
 					synchronized (driver) {
-						try {driver.wait(30000);} 
+						try {driver.wait(3000);} 
 						catch (InterruptedException r) { r.printStackTrace();}
 					}
-					postedHyperLink.click();
-					//act.moveToElement(postedHyperLink).click(postedHyperLink);
-					//act.perform();
-					//Old Code (Could be useful before due date)
+					Driver.js.executeScript("arguments[0].click();", postedHyperLink);
+					//Old Code (Could be useful in later updates)
 					/*Set<String> browserTabs = (driver.getWindowHandles());
 					String currentHandle = driver.getWindowHandle();
 					for (String tab : browserTabs) {

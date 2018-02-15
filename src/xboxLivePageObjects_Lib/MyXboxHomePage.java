@@ -5,7 +5,6 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -27,7 +26,7 @@ public class MyXboxHomePage extends PageObject {
 	public WebElement headerMixerStreams = popularMixerStreamsSection.findElement(By.cssSelector(".c-heading-6.f-lean"));
 	
 	
-	public MyXboxHomePage(WebDriver driver) {
+	public MyXboxHomePage(Driver driver) {
 		super(driver);
 		streamList = popularMixerStreamsSection.findElements(By.tagName("li"));
 	}
@@ -46,7 +45,8 @@ public class MyXboxHomePage extends PageObject {
 			if (counter == randNum) {
 				while (notClicked == false) {
 					try {
-						e.findElement(By.tagName("a")).click();	
+						Driver.js.executeScript("arguments[0].click();", e.findElement(By.tagName("a")));
+						//e.findElement(By.tagName("a")).click();	
 					}
 					catch (ElementNotVisibleException r) {
 						for(WebElement i : scrollOptions) {

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -75,7 +74,7 @@ public class CustomizeProfilePage extends PageObject {
 	public String newBioInfo;
 	public String newTooMuchInfo;
 	
-	public CustomizeProfilePage (WebDriver driver) {
+	public CustomizeProfilePage (Driver driver) {
 		super(driver);
 		newLocationInfo = randomLocationInfoSetup();
 		newBioInfo = randomBioInfoSetup();

@@ -1,19 +1,20 @@
 package xboxLivePageObjects_Lib;
 
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 
 public class PageObject {
-	protected WebDriver driver;
+	protected Driver driver;
 	public Actions act;
 	
-	PageObject(WebDriver driver){
+	
+	PageObject(Driver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		this.act = new Actions(driver);
+		
 	}
 	
 }

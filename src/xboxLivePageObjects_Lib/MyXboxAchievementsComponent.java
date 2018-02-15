@@ -5,7 +5,6 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -46,7 +45,8 @@ public class MyXboxAchievementsComponent extends PageObject {
 	public WebElement compareOKButton;
 	public WebElement compareCancelButton;
 	
-	public MyXboxAchievementsComponent (WebDriver driver) {
+	//incorporte JS with Driver or PageObject Class
+	public MyXboxAchievementsComponent (Driver driver) {
 		super(driver);
 	}
 	
@@ -92,11 +92,17 @@ public class MyXboxAchievementsComponent extends PageObject {
 		System.out.println(gameList.size());
 		for (WebElement e : gameList) {
 			if (counter == randNum) {
+				WebElement clickLink = e.findElement(By.tagName("a"));
 				recentGameViewed = e.findElement(By.tagName("a")).getAttribute("href");
 				System.out.println(recentGameViewed);
-				e.findElement(By.tagName("a")).click();
+				Driver.js.executeScript("arguments[0].click();", clickLink);
+				synchronized (driver) {
+					try {driver.wait(4000);} 
+					catch (InterruptedException r) { r.printStackTrace();}
+				}
 				break;
 			}
+			counter++;
 		}
 	}
 	

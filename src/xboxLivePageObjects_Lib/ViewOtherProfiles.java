@@ -1,6 +1,5 @@
 package xboxLivePageObjects_Lib;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,7 +17,7 @@ public class ViewOtherProfiles extends PageObject {
 	private WebElement addFriendButton;
 
 	
-	public ViewOtherProfiles (WebDriver driver) {
+	public ViewOtherProfiles (Driver driver) {
 		super(driver);
 	}
 	
