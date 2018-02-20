@@ -1,10 +1,15 @@
 package xboxLivePageObjects_Lib;
 
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,9 +17,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver implements WebDriver {
 	
-	public WebDriver driver;
+	protected WebDriver driver;
 	String browserName;
 	public static JavascriptExecutor js;
+	public TakesScreenshot bugCapture;
+	
+	public File testFailDir;
+	
+	
 	
 	public Driver (String browserName) {
 		this.browserName = browserName;
@@ -22,6 +32,8 @@ public class Driver implements WebDriver {
 			System.setProperty("webdriver.chrome.driver", "./resources/webdrivers/chromedriver_win32/chromedriver.exe");
 			this.driver = new ChromeDriver();
 			js = (JavascriptExecutor) this.driver;
+			bugCapture = (TakesScreenshot)driver;
+			testFailDir = newFailCapDir();
 		}
 		
 		
@@ -29,9 +41,19 @@ public class Driver implements WebDriver {
 			System.setProperty("webdriver.gecko.driver", "./resources/webdrivers/geckodriver.exe");
 			this.driver = new FirefoxDriver();
 			js = (JavascriptExecutor) this.driver;
+			bugCapture = (TakesScreenshot)driver;
+			testFailDir = newFailCapDir();
 		}
 		// TODO add the rest of the browser
 		
+	}
+	
+	public File newFailCapDir() {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+		this.testFailDir = new File("./target/surefire-reports/error-pics/TestSuiteFailiures_"+formater.format(calendar));
+		this.testFailDir.mkdir();
+		return this.testFailDir;
 	}
 
 	public void close() {

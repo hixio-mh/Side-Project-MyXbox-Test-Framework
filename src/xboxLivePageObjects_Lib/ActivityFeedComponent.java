@@ -138,7 +138,7 @@ public class ActivityFeedComponent extends PageObject {
 					attempts++;
 				}
 						
-				System.out.println((listCounter+1) + ": " + retrievedText);
+				System.out.println((listCounter) + ": " + retrievedText);
 				if(retrievedText.trim().equals(recentGibberish)) {
 					found = true;
 					System.out.println("New message has been found");

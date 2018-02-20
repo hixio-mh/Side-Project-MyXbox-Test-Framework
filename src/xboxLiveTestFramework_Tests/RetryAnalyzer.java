@@ -1,19 +1,16 @@
 package xboxLiveTestFramework_Tests;
 
-import java.io.File;
-import java.io.IOException;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+
+
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-import com.google.common.io.Files;
 
-public class RetryAnalyzer implements IRetryAnalyzer {
+public class RetryAnalyzer extends BaseTest implements IRetryAnalyzer {
 	int count = 0;
 	private static int maxTry = 1;
+	ScreenshotListstener picCapture = new ScreenshotListstener();
 
 	public boolean retry(ITestResult arg0) {
 		if(count < maxTry) {
@@ -21,20 +18,9 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 			return true; //Retry for flaky tests with unexpected variables 
 		} else {
 			
-			arg0.setStatus(ITestResult.FAILURE);
+			picCapture.onTestFailure(driverThread.get(), arg0);
 			return false; //Don't retry the failed test Capture Screenshot.
 		}
 	}
 	
-	public void extendReportsFailOperations (ITestResult arg0) {
-		Object testClass = arg0.getInstance();
-		WebDriver webDriver = ((BaseTest)testClass).driver;
-		String methodName = arg0.getInstanceName();
-		File bugPic = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
-		try {
-			Files.copy(bugPic, new File("./surefire-reports/error-pics/"+ methodName + "_" +System.currentTimeMillis() + ".png"));
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
 }

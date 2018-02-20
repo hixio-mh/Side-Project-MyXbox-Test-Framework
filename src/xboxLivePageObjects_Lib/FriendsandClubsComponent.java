@@ -3,6 +3,7 @@ package xboxLivePageObjects_Lib;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -156,7 +157,7 @@ public class FriendsandClubsComponent extends PageObject {
 		return new FriendsandClubsComponent(driver);
 	}
 	
-	//Broken Code due to <a> tag links no longer functional
+	
 	public FriendsandClubsComponent viewAccount () {
 		List<WebElement> combinedLists = generalAccountList;
 		if (suggestedAccounts != null) {
@@ -170,7 +171,6 @@ public class FriendsandClubsComponent extends PageObject {
 				recentlyViewed = e.findElement(By.className("xboxprofileinfo")).findElement(By.className("name")).getText();
 				recentlyViewedURL = e.findElement(By.tagName("a")).getAttribute("href");
 				Driver.js.executeScript("arguments[0].click();", e.findElement(By.tagName("a")));
-				//act.moveToElement(e.findElement(By.tagName("a"))).click().perform();
 				synchronized (driver) {
 						 try {driver.wait(4000);} 
 						 catch (InterruptedException wait) { wait.printStackTrace();}
@@ -322,7 +322,7 @@ public class FriendsandClubsComponent extends PageObject {
 	public void findFaceBookFriends() {
 		findFacebookFriends = entireList.findElement(By.partialLinkText("Find facebook friends"));
 		Driver.js.executeScript("arguments[0].click();", findFacebookFriends);
-		//findFacebookFriends.click();
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 	}
 
 }
