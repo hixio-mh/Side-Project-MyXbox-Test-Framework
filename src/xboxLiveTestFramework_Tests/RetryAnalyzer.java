@@ -15,7 +15,7 @@ public class RetryAnalyzer extends BaseTest implements IRetryAnalyzer {
 	public boolean retry(ITestResult arg0) {
 		if(count < maxTry) {
 			count++;
-			return true; //Retry for flaky tests with unexpected variables 
+			return true; //Retry for flakey tests with unexpected variables 
 		} else {
 			
 			picCapture.onTestFailure(driverThread.get(), arg0);

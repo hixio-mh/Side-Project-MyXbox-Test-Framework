@@ -48,10 +48,11 @@ public class Driver implements WebDriver {
 		
 	}
 	
+	//Work on this for legal format
 	public File newFailCapDir() {
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
-		this.testFailDir = new File("./target/surefire-reports/error-pics/TestSuiteFailiures_"+formater.format(calendar));
+		this.testFailDir = new File("./target/surefire-reports/error-pics/TestSuiteFailiures_"+formater.format(calendar.getTime()));
 		this.testFailDir.mkdir();
 		return this.testFailDir;
 	}
